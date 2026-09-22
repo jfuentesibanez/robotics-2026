@@ -1,11 +1,11 @@
 # A Look at the Present and Future of Robotics
 
-English rebuild of the 2023 AJE Cádiz robotics talk. 53 slides, ~35–40 minutes.
+English rebuild of the 2023 AJE Cádiz robotics talk. 54 slides, ~35–40 minutes.
 
 ```
 robotics-2026.html     the deck — open it in any browser, double-click works
 image-prompts.md       the 17 prompts the illustrations came from
-img/                   the 17 animated illustrations — keep this folder next to the HTML
+img/                   the 18 animated illustrations — keep this folder next to the HTML
 poster/                the still frames (already embedded in the HTML; kept as a source set)
 video/                 drop local copies of the clips here (optional)
 ```
@@ -30,7 +30,7 @@ against YouTube's API — all eight resolve to the official channel named on the
 in the footer of every slide, on an ivory chip where the slide is dark. Both are embedded in the
 HTML — nothing to install.
 
-**Illustrations — how the animation is handled.** The 17 pieces are ~150-frame loops, 46 MB in
+**Illustrations — how the animation is handled.** The 18 pieces are six-second loops, 38 MB in
 total, which is far too much to open a deck with. So the deck carries a still frame of each one
 embedded in the HTML, loads the animated file the moment you reach that slide plus the next one,
 and then quietly fetches the remaining loops one by one in the background. On a normal connection

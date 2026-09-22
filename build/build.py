@@ -35,7 +35,6 @@ LOGO = ('<div class="logorow">'
         '</div>')
 FOOTLOGO = '<span class="foot-logo" aria-hidden="true"></span>'
 
-NUM = {'golem': '01-golem', 'talos': '02-talos', 'pandora': '03-pandora', 'capek': '04-capek', 'steam': '05-steam', 'arm': '06-arm', 'warehouse': '07-warehouse', 'automaton': '08-automaton', 'brain-gear': '09-brain-gear', 'stage-mud': '10-stage-mud', 'hand-word': '11-hand-word', 'scale': '12-scale', 'pocketwatch': '13-pocketwatch', 'factory': '14-factory', 'lease-cart': '15-lease-cart', 'fishing-net': '16-fishing-net', 'seal': '17-seal'}
 
 def art_block(name):
     uri = ART[name]

@@ -114,6 +114,13 @@ dict(kind="video", act="AI meets robotics", title="Reasoning before acting",
 dict(kind="anchor", act="AI meets robotics", dark=True,
      text="Robots stopped being programmed.<br>They started being trained."),
 
+dict(kind="bullets", act="AI meets robotics", title="Live: a word in its mouth", art="reachy-mini", items=[
+  "<b>Reachy Mini</b> — Pollen Robotics and Hugging Face. open source, $299",
+  "four microphones, a camera, a speaker. no arms, no legs",
+  "voice mode: it listens, a model answers, the body reacts",
+  "watch the pauses and the misreadings. that is the work left"],
+  src="Hugging Face · Pollen Robotics, Reachy Mini launch, July 2025 · live, unscripted"),
+
 dict(kind="bullets", act="AI meets robotics", title="Skills now move between bodies", art="hand-word", items=[
   "a skill learned on one arm transfers to a different robot entirely",
   "no re-engineering, no per-platform specialisation",

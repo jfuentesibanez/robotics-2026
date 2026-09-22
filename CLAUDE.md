@@ -1,6 +1,6 @@
 # Robotics keynote — CDP / Headspring
 
-A 53-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
+A 54-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
 through Headspring. September 2026. Rebuilt and extended from a 2023 Spanish deck.
 
 ## The one rule
@@ -20,7 +20,7 @@ It writes `../robotics-2026.html`. Takes about a second.
 ```
 robotics-2026.html   generated — the deck
 index.html           generated — redirects to the deck, so the Pages URL needs no file name
-img/                 17 animated illustrations (~46 MB) — must sit beside the HTML
+img/                 18 animated illustrations (~38 MB) — must sit beside the HTML
 video/               the eight clips, 720p H.264 mp4 (~300 MB) — play inside the deck
 build/
   slides.py          all slide content, in order. This is the file you usually want
@@ -33,7 +33,7 @@ README.md            presenter-facing notes: how to run it, what changed since 2
 
 ## How the illustrations work — read before touching them
 
-Each of the 17 pieces is a ~150-frame animated WebP loop. All 17 come to 46 MB, far too
+Each of the 18 pieces is a ~150-frame animated WebP loop. All 18 come to 38 MB, far too
 much to embed or to load up front. So each ships twice:
 
 - the **still first frame** is embedded in the HTML as a data URI (494 KB for all 17)
