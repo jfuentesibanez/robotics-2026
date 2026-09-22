@@ -168,8 +168,8 @@ dict(kind="bullets", act="AI meets robotics", title="Bigger is not the answer on
   src="VLA-Perf, Feb 2026 · SmolVLA, Jun 2025 · RoboChallenge, Oct 2025"),
 
 dict(kind="data", act="AI meets robotics", figure="89.4% → 12.4%",
-     cap="the same methods, in simulation and then on realistic household tasks",
-     src="Stanford AI Index 2026 · RLBench against BEHAVIOR-1K"),
+     cap="best success on 18 short tabletop tasks, then on 1,000 long household chores. both in simulation",
+     src="Stanford AI Index 2026 · RLBench, EquAct, January 2026 · BEHAVIOR-1K Challenge, 2025, top team"),
 
 dict(kind="bullets", act="AI meets robotics", title="And they are slow", items=[
   "package sorting: <b>4× slower</b> than a person, at 95% accuracy",

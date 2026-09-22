@@ -83,7 +83,8 @@ Added:
   close: it never disobeys, which is exactly the problem.
 - **A 15-slide block on 2023–2026** that did not exist before: RT-2 to Helix 2.5, skills
   transferring between bodies, the Unitree price collapse, why small models still matter, and
-  the counter-evidence (89.4% in simulation against 12.4% on real household tasks).
+  the counter-evidence (89.4% on short simulated tabletop tasks against 12.4% on long simulated
+  household chores).
 - **Evidence and failure side by side** — Figure at BMW with real numbers, and Blue Jay,
   Optimus, and the three-year Amazon pilot in the next slide.
 - **Three uncomfortable conclusions and four Monday actions**, which the old deck ended without.
