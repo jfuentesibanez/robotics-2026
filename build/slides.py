@@ -17,7 +17,7 @@ dict(kind="bullets", act="The old longing", title="Talos", art="talos", items=[
   "bronze giant, forged by a god, patrolling Crete three times a day",
   "the first automaton in the Western imagination",
   "already the two obsessions: tireless labour and absolute obedience",
-  "and already the flaw — a single bronze nail at the ankle"]),
+  "and already the flaw: a single bronze nail at the ankle"]),
 
 dict(kind="bullets", act="The old longing", title="Pandora", art="pandora", items=[
   "made, not born. assembled by Hephaestus on commission",
@@ -28,14 +28,14 @@ dict(kind="bullets", act="The old longing", title="Pandora", art="pandora", item
 dict(kind="bullets", act="The old longing", title="The Golem", art="golem", items=[
   "Prague, sixteenth century: clay shaped into a servant",
   "animated by a word placed in its mouth",
-  "Gustav Meyrink, <i>Der Golem</i>, 1915 — it returns every thirty-three years",
+  "Gustav Meyrink, <i>Der Golem</i>, 1915: it returns every thirty-three years",
   "it does not rebel. it does exactly what it was told"]),
 
 dict(kind="anchor", act="The old longing", dark=True,
      text="The Golem never disobeys.<br>That is the whole problem."),
 
 dict(kind="bullets", act="The old longing", title="The right word", art="capek", items=[
-  "<b>robot</b> comes from the Czech <i>robota</i> — forced labour",
+  "<b>robot</b> comes from the Czech <i>robota</i>: forced labour",
   "coined by Karel Čapek in his 1920 play <i>R.U.R.</i>",
   "in the play the robots are organic, built to work, and they revolt",
   "we named the machine after the servitude, not the mechanism"]),
@@ -45,22 +45,22 @@ dict(kind="anchor", act="The old longing", wide=True,
 
 # ---------------- ACT II — WHERE WE ACTUALLY ARE ----------------
 dict(kind="bullets", act="Where we are", title="Four industrial revolutions", art="steam", items=[
-  "<b>1784</b> — water and steam power the machine",
-  "<b>1870</b> — electricity and oil make mass production possible",
-  "<b>1970</b> — electronics and IT automate the line",
-  "<b>2011</b> — cyber-physical systems connect it all"]),
+  "<b>1784</b>: water and steam power the machine",
+  "<b>1870</b>: electricity and oil make mass production possible",
+  "<b>1970</b>: electronics and IT automate the line",
+  "<b>2011</b>: cyber-physical systems connect it all"]),
 
 dict(kind="bullets", act="Where we are", title="What a robot is today", art="arm", items=[
-  "<b>industrial</b> — bolted down, fenced off, one task, decades of service",
-  "<b>service</b> — mobile, among people, many tasks, short life",
+  "<b>industrial</b>: bolted down, fenced off, one task, decades of service",
+  "<b>service</b>: mobile, among people, many tasks, short life",
   "the industrial robot sells certainty; the service robot sells flexibility",
   "almost everything profitable today is still the first kind"]),
 
 dict(kind="bullets", act="Where we are", title="And by how it moves", art="warehouse", items=[
   "cartesian · cylindrical · spherical · SCARA",
-  "articulated · parallel — the arms that build cars",
-  "wheels · legs · tracks — the ones that come to you",
-  "aerial · underwater — the ones that go where you cannot"]),
+  "articulated · parallel: the arms that build cars",
+  "wheels · legs · tracks: the ones that come to you",
+  "aerial · underwater: the ones that go where you cannot"]),
 
 dict(kind="data", act="Where we are", figure="542,000",
      cap="industrial robots installed worldwide in a single year",
@@ -74,7 +74,7 @@ dict(kind="chart", act="Where we are", title="Where the robots went",
        "United States": [21000,22000,24000,26000,28000,31000,33000,40000,33000,31000,35000,40000,38000,34000],
        "South Korea":   [26000,19000,21000,25000,38000,41000,40000,38000,33000,31000,31000,32000,31000,31000],
        "Germany":       [20000,18000,18000,20000,20000,20000,21000,27000,22000,22000,24000,26000,28000,27000]},
-     note="295,000 in 2024 — thirteen times 2011",
+     note="295,000 in 2024, thirteen times 2011",
      src="IFR World Robotics, via Our World in Data · new industrial robots installed per year, 2011–2024"),
 
 dict(kind="bullets", act="Where we are", title="How to read that number", items=[
@@ -89,8 +89,8 @@ dict(kind="data", act="Where we are", figure="1,220 vs 132",
      src="IFR robot density, published April 2026 · reporting year 2024"),
 
 dict(kind="bullets", act="Where we are", title="Italy and Spain", items=[
-  "<b>Italy: 8,783</b> robots installed in 2024, down 16% — still second in Europe, fifth in the world",
-  "<b>Spain: 5,160</b>, up 2% — third in Europe, ahead of France for the first time since 2015",
+  "<b>Italy: 8,783</b> robots installed in 2024, down 16% – still second in Europe, fifth in the world",
+  "<b>Spain: 5,160</b>, up 2% – third in Europe, ahead of France for the first time since 2015",
   "Italy's density is 228 per 10,000 workers, the EU average; Germany runs at 449",
   "Italy's drop was domestic: a year spent waiting for the Transizione 5.0 incentives"],
   src="IFR World Robotics 2025, Sept 2025 · IFR density, April 2026 · SIRI–UCIMU, Feb 2025 · AER Automation, July 2025"),
@@ -100,7 +100,7 @@ dict(kind="bullets", act="The gap", title="Unmet expectations", art="automaton",
   "the future we were promised: a humanoid servant in every home",
   "the future we got: a sealed arm welding the same seam for twenty years",
   "we mistook the <b>shape</b> of the machine for the point of it",
-  "for fifty years robots were strong, fast, precise — and blind"]),
+  "for fifty years robots were strong, fast, precise – and blind"]),
 
 dict(kind="anchor", act="The gap", text="Slowly.<br>And then suddenly."),
 
@@ -108,7 +108,7 @@ dict(kind="anchor", act="The gap", text="Slowly.<br>And then suddenly."),
 dict(kind="bullets", act="AI meets robotics", title="2023", art="brain-gear", items=[
   "RT-2: the first model to read the web and output robot actions",
   "success on <b>unseen</b> scenarios rose from 32% to 62%",
-  "impressive — and it all happened inside one office kitchen",
+  "impressive – and it all happened inside one office kitchen",
   "generalisation meant new objects, not a new building"],
   src="Google DeepMind, RT-2, July 2023"),
 
@@ -116,7 +116,7 @@ dict(kind="bullets", act="AI meets robotics", title="2026", art="stage-mud", ite
   "one frozen model walked into <b>30 homes it had never seen</b>",
   "tidy the living room, fold the towels, make the bed",
   "no data from those homes, no retraining, unseen objects",
-  "<b>56%</b> success — which is also the reliability number"],
+  "<b>56%</b> success – which is also the reliability number"],
   src="Figure, Helix 2.5, September 2026 · company-reported"),
 
 dict(kind="video", act="AI meets robotics", title="Reasoning before acting",
@@ -126,7 +126,7 @@ dict(kind="anchor", act="AI meets robotics", dark=True,
      text="Robots stopped being programmed.<br>They started being trained."),
 
 dict(kind="bullets", act="AI meets robotics", title="Live: a word in its mouth", art="reachy-mini", items=[
-  "<b>Reachy Mini</b> — Pollen Robotics and Hugging Face. open source, $299",
+  "<b>Reachy Mini</b>: Pollen Robotics and Hugging Face. open source, $299",
   "four microphones, a camera, a speaker. no arms, no legs",
   "voice mode: it listens, a model answers, the body reacts",
   "watch the pauses and the misreadings. that is the work left"],
@@ -147,8 +147,8 @@ dict(kind="data", act="AI meets robotics", figure="$90,000 → $29,900",
      src="Unitree H1 and H2 list prices", dark=True),
 
 dict(kind="bullets", act="AI meets robotics", title="The research bench collapsed too", art="scale", items=[
-  "2023 — ALOHA, a capable bimanual rig, under <b>$20,000</b>",
-  "2026 — an SO-101 leader-follower pair, around <b>€550</b>",
+  "2023: ALOHA, a capable bimanual rig, under <b>$20,000</b>",
+  "2026: an SO-101 leader-follower pair, around <b>€550</b>",
   "a 450M-parameter policy trains on one consumer GPU",
   "the barrier to trying this is now a rounding error"],
   src="ALOHA, Apr 2023 · LeRobot, Feb 2026"),
@@ -157,7 +157,7 @@ dict(kind="video", act="AI meets robotics", title="And the volume is Chinese",
      vid="eUdBIFkMh-M", slug="04-unitree-h2", label="Unitree H2 · Unitree Robotics, October 2025"),
 
 dict(kind="bullets", act="AI meets robotics", title="Bigger is not the answer on a robot", art="pocketwatch", items=[
-  "an 81B-parameter policy runs at <b>9.6 Hz</b> — on a datacentre GPU",
+  "an 81B-parameter policy runs at <b>9.6 Hz</b> – on a datacentre GPU",
   "a robot arm needs 50 Hz, on hardware that fits inside it, at 40 watts",
   "a 450M model matches ones ten times its size on real tasks",
   "and fine-tuning to <b>your</b> task beats a generalist cold: 43.7% vs 17.7%"],
@@ -175,10 +175,10 @@ dict(kind="bullets", act="AI meets robotics", title="And they are slow", items=[
   src="Epoch AI, 2026 · LIBERO-Plus, CVPR 2026"),
 
 dict(kind="video", act="AI meets robotics", title="What autonomy looks like",
-     vid="F_7IPm7f1vI", slug="05-atlas-hands-on", label="Atlas Goes Hands On · Boston Dynamics — no teleoperation"),
+     vid="F_7IPm7f1vI", slug="05-atlas-hands-on", label="Atlas Goes Hands On · Boston Dynamics – no teleoperation"),
 
 dict(kind="video", act="AI meets robotics", title="And what it does not",
-     vid="LTYMWadOW7c", slug="06-1x-neo", label="NEO The Home Robot · 1X — shipped with human teleoperators in the loop"),
+     vid="LTYMWadOW7c", slug="06-1x-neo", label="NEO The Home Robot · 1X – shipped with human teleoperators in the loop"),
 
 dict(kind="anchor", act="AI meets robotics",
      text="Ask for the intervention rate.<br>Ask for the hours. Ask for the site."),
@@ -209,17 +209,17 @@ dict(kind="bullets", act="Evidence", title="The same eighteen months, the other 
   src="The Robot Report, Reuters, company statements 2025–2026"),
 
 dict(kind="data", act="Evidence", figure="19,100",
-     cap="humanoid robots shipped in the first half of 2026 — up 272%, and 97% from Chinese vendors",
+     cap="humanoid robots shipped in the first half of 2026: up 272%, and 97% from Chinese vendors",
      src="Counterpoint Research, August 2026", dark=True),
 
 dict(kind="video", act="Evidence", title="Meanwhile, the revolution that already happened",
-     vid="7SvTdW4OLUQ", slug="08-amazon-robots", label="The full Amazon robot line-up · Amazon News — one million robots deployed"),
+     vid="7SvTdW4OLUQ", slug="08-amazon-robots", label="The full Amazon robot line-up · Amazon News – one million robots deployed"),
 
 # ---------------- ACT VI — BUSINESS IMPACT ----------------
 dict(kind="bullets", act="Business impact", title="Three levels, not one", items=[
-  "<b>operational</b> — what the machine can actually do, and how often it fails",
-  "<b>financial</b> — how you pay for it, and when it pays you back",
-  "<b>labour</b> — who does what afterwards, and who says so",
+  "<b>operational</b>: what the machine can actually do, and how often it fails",
+  "<b>financial</b>: how you pay for it, and when it pays you back",
+  "<b>labour</b>: who does what afterwards, and who says so",
   "most boards only ever discuss the first one"]),
 
 dict(kind="bullets", act="Business impact", title="From CapEx to OpEx", art="lease-cart", items=[
@@ -269,7 +269,7 @@ dict(kind="bullets", act="On Monday", title="Pick a task, not a robot", items=[
 
 dict(kind="bullets", act="On Monday", title="Buy hours, not machines", items=[
   "structure the first deployment as a service, with an exit",
-  "tie payment to a metric you already track — parts per hour, tote accuracy",
+  "tie payment to a metric you already track: parts per hour, tote accuracy",
   "agree who pays when it fails, before it fails",
   "a two-year commitment on this technology is a long time"]),
 
@@ -281,7 +281,7 @@ dict(kind="bullets", act="On Monday", title="Start recording now", items=[
 
 dict(kind="bullets", act="On Monday", title="Demand three numbers", items=[
   "<b>hours</b> of unattended operation, at a named site",
-  "<b>intervention rate</b> — how often a human had to step in",
+  "<b>intervention rate</b>: how often a human had to step in",
   "<b>cycle time</b> against your current human baseline",
   "a vendor who cannot give you all three is selling a film"]),
 
