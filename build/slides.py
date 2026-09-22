@@ -113,6 +113,9 @@ dict(kind="bullets", act="AI meets robotics", title="2026", art="stage-mud", ite
   "<b>56%</b> of the tasks done, first time, no help"],
   src="Figure, Helix 2.5, September 2026 · company-reported"),
 
+dict(kind="video", act="AI meets robotics", title="Eight hours of demonstrations",
+     vid="f6ChFc8eUuo", slug="03-figure-helix", label="Helix Logistics · Figure, February 2025"),
+
 dict(kind="data", act="AI meets robotics", figure="56%",
      cap="an extraordinary research result. and a product number no plant manager would accept",
      src="Figure, Helix 2.5, September 2026 · company-reported"),
@@ -136,9 +139,6 @@ dict(kind="bullets", act="AI meets robotics", title="Skills now move between bod
   "a model folded a shirt on a bimanual arm it had never trained on",
   "the skill stopped being a property of the machine"],
   src="DeepMind Motion Transfer, Sep 2025 · Physical Intelligence π0.7, Apr 2026"),
-
-dict(kind="video", act="AI meets robotics", title="Eight hours of demonstrations",
-     vid="f6ChFc8eUuo", slug="03-figure-helix", label="Helix Logistics · Figure, February 2025"),
 
 dict(kind="data", act="AI meets robotics", figure="$90,000 → $29,900",
      cap="what a full-size humanoid cost, April 2024 against October 2025",
