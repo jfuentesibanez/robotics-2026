@@ -207,7 +207,7 @@ dict(kind="bullets", act="Evidence", title="And then it came back", items=[
 
 dict(kind="bullets", act="Evidence", title="The same eighteen months, the other column", items=[
   "Amazon's Blue Jay sortation system: launched October, shut down by February",
-  "Tesla: zero Optimus units doing useful work in its own factories, admitted January 2026",
+  "Tesla admits, January 2026: no Optimus doing useful work in its plants",
   "Agility's Digit at Amazon: still a pilot, three years in",
   "Rethink Robotics, iRobot, K-Scale: bankrupt or wound down"],
   src="The Robot Report, Reuters, company statements 2025–2026"),
