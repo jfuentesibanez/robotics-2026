@@ -77,12 +77,12 @@ dict(kind="data", act="Where we are", figure="1,220 vs 132",
      cap="robots per 10,000 manufacturing workers: South Korea against the world average",
      src="IFR robot density, published April 2026 · reporting year 2024"),
 
-dict(kind="bullets", act="Where we are", title="And Spain", items=[
-  "<b>5,160</b> industrial robots installed in 2024, up 2%",
-  "third in Europe — ahead of France for the first time since 2015",
-  "automotive took 44% of them",
-  "electrical and electronics grew 118% in one year"],
-  src="AER Automation, July 2025, on IFR preliminary data"),
+dict(kind="bullets", act="Where we are", title="Italy and Spain", items=[
+  "<b>Italy: 8,783</b> robots installed in 2024, down 16% — still second in Europe, fifth in the world",
+  "<b>Spain: 5,160</b>, up 2% — third in Europe, ahead of France for the first time since 2015",
+  "Italy's density is 228 per 10,000 workers, the EU average; Germany runs at 449",
+  "Italy's drop was domestic: a year spent waiting for the Transizione 5.0 incentives"],
+  src="IFR World Robotics 2025, Sept 2025 · IFR density, April 2026 · SIRI–UCIMU, Feb 2025 · AER Automation, July 2025"),
 
 # ---------------- ACT III — THE EXPECTATION GAP ----------------
 dict(kind="bullets", act="The gap", title="Unmet expectations", art="automaton", items=[
