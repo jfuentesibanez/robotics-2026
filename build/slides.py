@@ -286,7 +286,7 @@ dict(kind="bullets", act="On Monday", title="Pick a task, not a robot", items=[
 
 dict(kind="bullets", act="On Monday", title="Buy hours, not machines", items=[
   "structure the first deployment as a service, with an exit",
-  "tie payment to a metric you already track: parts per hour, tote accuracy",
+  "tie payment to a metric you already track: parts per hour, pick accuracy",
   "agree who pays when it fails, before it fails",
   "a two-year commitment on this technology is a long time"]),
 
