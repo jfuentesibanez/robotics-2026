@@ -1,6 +1,6 @@
 # A Look at the Present and Future of Robotics
 
-English rebuild of the 2023 AJE Cádiz robotics talk. 55 slides, ~35–40 minutes.
+English rebuild of the 2023 AJE Cádiz robotics talk. 56 slides, ~35–40 minutes.
 
 ```
 robotics-2026.html     the deck — open it in any browser, double-click works
@@ -13,13 +13,15 @@ video/                 drop local copies of the clips here (optional)
 **Running it.** `←` `→` or click to move, `f` for fullscreen, click anywhere in the left
 quarter of the screen to go back. The deck scales to whatever screen it lands on.
 
-**Videos.** Eight clips, each behind a play button. `v` or a click plays the one on screen,
+**Videos.** Nine clips, each behind a play button. `v` or a click plays the one on screen,
 full screen; `space` pauses, `←` `→` seek ten seconds, `Esc` stops and returns to the slide.
-All eight are in `video/` as local 720p files, so they play *inside the deck, offline*, with no
+All nine are in `video/` as local files, so they play *inside the deck, offline*, with no
 YouTube chrome and no buffering in front of an audience. The BBC piece is trimmed to its first
 2:52, which is where Asimov says the line on the slide. Names, in slide order:
 `01-asimov-1967` · `02-gemini-robotics` · `03-figure-helix` · `04-unitree-h2` ·
-`05-atlas-hands-on` · `06-1x-neo` · `07-bmw-figure` · `08-amazon-robots`.
+`05-atlas-hands-on` · `06-1x-neo` · `07-bmw-figure` · `08-amazon-robots` · `09-rt2-2023`.
+The RT-2 clip is DeepMind's own demo montage from the project page (silent, 1080p); it was never
+on YouTube, so its fallback is the project page rather than a player.
 
 If a file is missing the deck falls back on its own: served over http(s) it embeds the YouTube
 player and takes it full screen; opened as a `file://` it opens the clip on YouTube in a new tab,

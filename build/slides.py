@@ -112,6 +112,10 @@ dict(kind="bullets", act="AI meets robotics", title="2023", art="brain-gear", it
   "generalisation meant new objects, not a new building"],
   src="Google DeepMind, RT-2, July 2023"),
 
+dict(kind="video", act="AI meets robotics", title="Pick up the extinct animal",
+     link="https://robotics-transformer2.github.io/", slug="09-rt2-2023",
+     label="RT-2 demonstrations · Google DeepMind, July 2023 · silent footage"),
+
 dict(kind="bullets", act="AI meets robotics", title="2026", art="stage-mud", items=[
   "one frozen model walked into <b>30 homes it had never seen</b>",
   "tidy the living room, fold the towels, make the bed",

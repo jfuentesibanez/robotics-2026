@@ -108,7 +108,10 @@ def render(s, i):
         body = f'<h2>{s["title"]}</h2>{chart_svg(s)}' + src_line(s)
     elif k == 'video':
         cls.append('k-video')
-        body = (f'<div class="vwrap" data-vid="{s["vid"]}" data-slug="{s["slug"]}">'
+        vid  = s.get('vid', '')
+        link = s.get('link') or ('https://www.youtube.com/watch?v=' + vid)
+        ltxt = 'open on youtube &#8599;' if vid else 'open the source page &#8599;'
+        body = (f'<div class="vwrap" data-vid="{vid}" data-link="{link}" data-slug="{s["slug"]}">'
                 f'<h2>{s["title"]}</h2>'
                 f'<div class="vstage">'
                 f'<video class="vplayer" playsinline preload="metadata">'
@@ -119,8 +122,7 @@ def render(s, i):
                 f'</div>'
                 f'<p class="vlabel">{s["label"]}</p>'
                 f'<p class="vhint"></p>'
-                f'<a class="vlink" href="https://www.youtube.com/watch?v={s["vid"]}" '
-                f'target="_blank" rel="noopener">open on youtube &#8599;</a></div>')
+                f'<a class="vlink" href="{link}" target="_blank" rel="noopener">{ltxt}</a></div>')
     elif k == 'bullets':
         lis = ''.join(f'<li>{b}</li>' for b in s['items'])
         has = bool(s.get('art'))
@@ -345,7 +347,7 @@ document.querySelectorAll('.vwrap').forEach(w=>{
   v.addEventListener('error',()=>{
     stage.classList.add('noclip');
     hint.textContent = FILE
-      ? 'press v · opens on youtube, full screen'
+      || !w.dataset.vid ? 'press v · opens the source page'
       : 'press v · plays here, full screen';
   },true);
   v.addEventListener('loadedmetadata',()=>{
@@ -368,8 +370,8 @@ function playVideo(w){
     return;
   }
   // 2. no local clip, served over http(s) -> embedded YouTube player, full screen
-  const url='https://www.youtube.com/watch?v='+w.dataset.vid;
-  if(!FILE){
+  const url=w.dataset.link;
+  if(!FILE && w.dataset.vid){
     const f=document.createElement('iframe');
     let ok=false;
     f.className='ytframe';f.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';
