@@ -1,6 +1,6 @@
 # Robotics keynote — CDP / Headspring
 
-A 56-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
+A 57-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
 through Headspring. September 2026. Rebuilt and extended from a 2023 Spanish deck.
 
 ## The one rule
@@ -75,7 +75,9 @@ From the `deck-una-idea` house style. Worth keeping:
 - Every figure carries its source in the `src` field, set in small grey type under the bullets.
 - Bullets are a short brass dash (14 px, 2 px thick), pure CSS — it echoes the rule under each title.
 
-Slide kinds in `slides.py`: `cover · quote · bullets · anchor · data · chart · video · close`.
+Slide kinds in `slides.py`: `cover · quote · bullets · anchor · data · chart · video · breath · close`.
+A `breath` slide is the illustration alone, no text: a pause after a heavy run, used once after
+the three uncomfortable conclusions.
 A `chart` slide is a static SVG line chart drawn by `chart_svg()` in build.py from the numbers
 in `slides.py`: one highlighted series in rust, the rest in grey with labels at the line end.
 Long slides shrink to fit automatically (`fitSlide()`), so a fifth bullet will not overflow —
@@ -112,6 +114,22 @@ change its source line with it. Two are worth flagging under questioning:
 - **China's robot density is 166 per 10,000**, not the 470 that circulated in 2024. IFR
   restated it downward in April 2026 after China revised its manufacturing employment base.
   The old figure is still all over the web.
+
+- **Humanoid shipments, H1 2026.** The slide uses Counterpoint's numbers: 22,000+ units, up
+  nearly 300%, 86% from Chinese vendors, Agibot and Unitree first and second (20 August 2026).
+  A rival estimate from Smart Analytics Global (19,100, +272%, 97% Chinese) circulated via Forbes
+  the same week; do not mix the two.
+- **Tesla Optimus.** The slide quotes Musk on the Q4 2025 call, 28 January 2026: "It's not in
+  usage in our factories in a material way. It's more so that the robot can learn." He also said
+  "It's still in the R&D phase." (Motley Fool transcript.)
+- **Epoch AI, "Where Autonomy Works", 10 February 2026.** It names a handful of systems with
+  proven economic value in production (Amazon's Vulcan picker, Boston Dynamics' Stretch unloader,
+  the Hydrus underwater vehicle), none humanoid; package sorting ~4× slower than an average
+  worker; household tasks 2–10× slower, laundry 5×. It does not give a count of "five systems":
+  the slide was reworded to match.
+- **Hourly labour cost 2025** (Eurostat lc_lci_lev, whole economy, March 2026): EU €34.9,
+  Germany €45.0, Italy €32.0, Spain €26.4. Agility's $8,500/month RaaS price and $25,000
+  deployment fee are from its June 2026 SPAC investor deck as reported by The Robot Report.
 
 ## Deploying
 

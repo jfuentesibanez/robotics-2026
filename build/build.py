@@ -104,6 +104,9 @@ def render(s, i):
     elif k == 'data':
         body = (f'<p class="figure">{s["figure"]}</p><p class="figcap">{s["cap"]}</p>'
                 + src_line(s))
+    elif k == 'breath':                      # illustration only: a pause between two heavy slides
+        cls.append('has-art')
+        body = art_block(s['art'])
     elif k == 'chart':
         body = f'<h2>{s["title"]}</h2>{chart_svg(s)}' + src_line(s)
     elif k == 'video':
@@ -203,6 +206,9 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
 .dark li::before{background:#E2B95C}
 .dark h2::after{background:#E2B95C}
 
+.k-breath .inner{justify-content:center}
+.k-breath .art{flex:0 1 52%;max-height:560px}
+.k-breath .art img{max-height:540px}
 /* chart slides: house-style SVG line chart, rust highlight on grey context */
 .k-chart h2{margin-bottom:10px}
 .k-chart .src{margin-top:12px}

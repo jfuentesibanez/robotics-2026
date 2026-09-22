@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Slide model for "A Look at the Present and Future of Robotics" (EN, Sep 2026)
-# kind: cover | quote | bullets | anchor | data | chart | video | close
+# kind: cover | quote | bullets | anchor | data | chart | video | breath | close
 S = [
 dict(kind="cover", title="A Look at the Present<br>and Future of Robotics",
      who="Javier Fuentes Ibáñez", org="NCompany", date="Madrid · 24 September 2026", art="golem"),
@@ -44,23 +44,11 @@ dict(kind="anchor", act="The old longing", wide=True,
      text="Three thousand years of wanting it.<br>Sixty years of it working behind a fence.<br>Three years of it starting to understand."),
 
 # ---------------- ACT II — WHERE WE ACTUALLY ARE ----------------
-dict(kind="bullets", act="Where we are", title="Four industrial revolutions", art="steam", items=[
-  "<b>1784</b>: water and steam power the machine",
-  "<b>1870</b>: electricity and oil make mass production possible",
-  "<b>1970</b>: electronics and IT automate the line",
-  "<b>2011</b>: cyber-physical systems connect it all"]),
-
 dict(kind="bullets", act="Where we are", title="What a robot is today", art="arm", items=[
   "<b>industrial</b>: bolted down, fenced off, one task, decades of service",
   "<b>service</b>: mobile, among people, many tasks, short life",
-  "the industrial robot sells certainty; the service robot sells flexibility",
+  "arms build cars; wheels, legs and tracks come to you; drones go where you cannot",
   "almost everything profitable today is still the first kind"]),
-
-dict(kind="bullets", act="Where we are", title="And by how it moves", art="warehouse", items=[
-  "cartesian · cylindrical · spherical · SCARA",
-  "articulated · parallel: the arms that build cars",
-  "wheels · legs · tracks: the ones that come to you",
-  "aerial · underwater: the ones that go where you cannot"]),
 
 dict(kind="data", act="Where we are", figure="542,000",
      cap="industrial robots installed worldwide in a single year",
@@ -120,8 +108,12 @@ dict(kind="bullets", act="AI meets robotics", title="2026", art="stage-mud", ite
   "one frozen model walked into <b>30 homes it had never seen</b>",
   "tidy the living room, fold the towels, make the bed",
   "no data from those homes, no retraining, unseen objects",
-  "<b>56%</b> success – which is also the reliability number"],
+  "<b>56%</b> of the tasks done, first time, no help"],
   src="Figure, Helix 2.5, September 2026 · company-reported"),
+
+dict(kind="data", act="AI meets robotics", figure="56%",
+     cap="an extraordinary research result. and a product number no plant manager would accept",
+     src="Figure, Helix 2.5, September 2026 · company-reported"),
 
 dict(kind="video", act="AI meets robotics", title="Reasoning before acting",
      vid="UObzWjPb6XM", slug="02-gemini-robotics", label="Gemini Robotics 1.5 · Google DeepMind, September 2025"),
@@ -172,11 +164,11 @@ dict(kind="data", act="AI meets robotics", figure="89.4% → 12.4%",
      src="Stanford AI Index 2026 · RLBench, EquAct, January 2026 · BEHAVIOR-1K Challenge, 2025, top team"),
 
 dict(kind="bullets", act="AI meets robotics", title="And they are slow", items=[
-  "package sorting: <b>4× slower</b> than a person, at 95% accuracy",
-  "folding laundry, tidying a room, taking out the rubbish: 5–10× slower",
+  "package sorting: <b>4× slower</b> than an average worker",
+  "laundry 5× slower; most household tasks 2–10× slower than a person",
   "nudge the camera and benchmark scores fall from 95% to under 30%",
-  "five robotic systems worldwide are genuinely in production. none is humanoid"],
-  src="Epoch AI, 2026 · LIBERO-Plus, CVPR 2026"),
+  "what is genuinely in production: a warehouse picker, a truck unloader, an underwater drone. no humanoid"],
+  src="Epoch AI, Where Autonomy Works, February 2026 · LIBERO-Plus, CVPR 2026"),
 
 dict(kind="video", act="AI meets robotics", title="What autonomy looks like",
      vid="F_7IPm7f1vI", slug="05-atlas-hands-on", label="Atlas Goes Hands On · Boston Dynamics – no teleoperation"),
@@ -207,14 +199,14 @@ dict(kind="bullets", act="Evidence", title="And then it came back", items=[
 
 dict(kind="bullets", act="Evidence", title="The same eighteen months, the other column", items=[
   "Amazon's Blue Jay sortation system: launched October, shut down by February",
-  "Tesla admits, January 2026: no Optimus doing useful work in its plants",
+  "Tesla, January 2026: Optimus is \"not in usage in our factories in a material way\"",
   "Agility's Digit at Amazon: still a pilot, three years in",
   "Rethink Robotics, iRobot, K-Scale: bankrupt or wound down"],
   src="The Robot Report, Reuters, company statements 2025–2026"),
 
-dict(kind="data", act="Evidence", figure="19,100",
-     cap="humanoid robots shipped in the first half of 2026: up 272%, and 97% from Chinese vendors",
-     src="Counterpoint Research, August 2026", dark=True),
+dict(kind="data", act="Evidence", figure="22,000",
+     cap="humanoid robots shipped in the first half of 2026: up nearly 300%, and 86% from Chinese vendors",
+     src="Counterpoint Research, 20 August 2026", dark=True),
 
 dict(kind="video", act="Evidence", title="Meanwhile, the revolution that already happened",
      vid="7SvTdW4OLUQ", slug="08-amazon-robots", label="The full Amazon robot line-up · Amazon News – one million robots deployed"),
@@ -232,6 +224,13 @@ dict(kind="bullets", act="Business impact", title="From CapEx to OpEx", art="lea
   "GXO signed the first multi-year humanoid RaaS contract in 2024",
   "no vendor publishes an hourly rate. ask for one in writing"],
   src="IFR Service Robots 2025 · GXO, June 2024"),
+
+dict(kind="bullets", act="Business impact", title="Numbers to calibrate the answer", art="steam", items=[
+  "an industrial arm pays back in <b>18–36 months</b>; a cobot cell in 12–18",
+  "Digit, by Agility: about <b>$8,500 a month</b>, plus $25,000 to deploy",
+  "its own yardstick: a fully loaded worker at <b>$30 an hour</b>",
+  "labour per hour, 2025: Italy €32 · Spain €26 · Germany €45 · EU €35"],
+  src="integrator benchmarks 2026 · Agility Robotics investor deck, June 2026 · The Robot Report · Eurostat, March 2026"),
 
 dict(kind="bullets", act="Business impact", title="Labour: the honest version", items=[
   "the famous US study: one more robot per thousand workers costs <b>about 6 jobs</b> locally, 3 nationally",
@@ -264,6 +263,8 @@ dict(kind="anchor", act="Uncomfortable conclusions", kicker="Uncomfortable concl
 dict(kind="anchor", act="Uncomfortable conclusions", kicker="Uncomfortable conclusion 3", dark=True,
      text="The bottleneck is data,<br>and your operation is where it lives."),
 
+dict(kind="breath", act="Uncomfortable conclusions", art="warehouse"),
+
 # ---------------- ACT VIII — MONDAY ----------------
 dict(kind="bullets", act="On Monday", title="Pick a task, not a robot", items=[
   "write down the five tasks that cost you most in overtime and injuries",
@@ -279,8 +280,8 @@ dict(kind="bullets", act="On Monday", title="Buy hours, not machines", items=[
 
 dict(kind="bullets", act="On Monday", title="Start recording now", items=[
   "the models are short of data about <b>your</b> process, not about the world",
-  "video, cycle times, failure modes, the operator's hands",
-  "it costs almost nothing today and it is the asset you will not be able to buy",
+  "that is why 1X ships NEO with humans in the loop: every shift is training data",
+  "video, cycle times, failure modes, the operator's hands: cheap today, unbuyable later",
   "whoever holds the task data holds the negotiating position"]),
 
 dict(kind="bullets", act="On Monday", title="Demand three numbers", items=[
