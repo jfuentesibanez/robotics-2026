@@ -195,7 +195,7 @@ dict(kind="bullets", act="Evidence", title="The best-evidenced deployment there 
 dict(kind="video", act="Evidence", title="See it before you judge it",
      vid="xLVm-QKEZSI", slug="07-bmw-figure", label="Figure 02 at BMW Group Plant Spartanburg · BMW Group"),
 
-dict(kind="bullets", act="Evidence", title="And then it came back", items=[
+dict(kind="bullets", act="Evidence", title="And then they came back", items=[
   "the retired fleet was scratched, scuffed and grimy",
   "the recurring hardware failure was the forearm",
   "this is what a real deployment looks like at the end",
