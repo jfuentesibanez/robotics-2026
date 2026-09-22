@@ -18,20 +18,21 @@ slide after it carries the same eight acts in small type across the top, with th
 brass; that row is clickable too, so you can jump between acts without leaving the deck. The
 footer still names the act and the slide number.
 
-**Videos.** Nine clips, each behind a play button. `v` or a click plays the one on screen,
+**Videos.** Ten clips, each behind a play button. `v` or a click plays the one on screen,
 full screen; `space` pauses, `←` `→` seek ten seconds, `Esc` stops and returns to the slide.
-All nine are in `video/` as local files, so they play *inside the deck, offline*, with no
+All ten are in `video/` as local files, so they play *inside the deck, offline*, with no
 YouTube chrome and no buffering in front of an audience. The BBC piece is trimmed to its first
 2:52, which is where Asimov says the line on the slide. Names, in slide order:
 `01-asimov-1967` · `02-gemini-robotics` · `03-figure-helix` · `04-unitree-h2` ·
-`05-atlas-hands-on` · `06-1x-neo` · `07-bmw-figure` · `08-amazon-robots` · `09-rt2-2023`.
+`05-atlas-hands-on` · `06-1x-neo` · `07-bmw-figure` · `08-amazon-robots` · `09-rt2-2023` ·
+`10-figure-helix-25`.
 The RT-2 clip is DeepMind's own demo montage from the project page (silent, 1080p); it was never
 on YouTube, so its fallback is the project page rather than a player.
 
 If a file is missing the deck falls back on its own: served over http(s) it embeds the YouTube
 player and takes it full screen; opened as a `file://` it opens the clip on YouTube in a new tab,
 because browsers block the embedded player from `file://` origins. Every video ID was checked
-against YouTube's API — all eight resolve to the official channel named on the slide.
+against YouTube's API — all nine resolve to the official channel named on the slide.
 
 **Logos.** CDP and Headspring sit on the cover, divided by a hairline; Headspring repeats small
 in the footer of every slide, with its wordmark in paper colour where the slide is dark. Both are embedded in the
