@@ -28,11 +28,26 @@ ANIM_PX  = 672               # 640 for the heaviest pieces, see below
 ANIM_Q   = 60
 HEAVY_Q  = 46                # pieces that would otherwise run past ~5 MB
 POSTER_PX, POSTER_Q = 560, 72
-FRAME_MS = 40                # 25 fps; the originals carry no frame timing
+FRAME_MS = 40                # fallback only: 25 fps when a file carries no frame timing
 
 HERE   = pathlib.Path(__file__).resolve().parent
 IMGDIR = HERE.parent / 'img'
 POSTER = HERE / 'poster'
+
+def frame_durations(path, n):
+    """Per-frame durations in ms, read straight from the ANMF chunks.
+
+    Pillow does not reliably expose them for these files, and the timing is not
+    uniform: the automaton's chest pulse runs 80-560 ms a frame. Forcing 40 ms
+    would play it 2.5x too fast. Falls back to FRAME_MS if the file has no
+    animation chunks."""
+    data = path.read_bytes(); pos = 12; out = []
+    while pos + 8 <= len(data):
+        tag = data[pos:pos+4]; size = int.from_bytes(data[pos+4:pos+8], 'little')
+        if tag == b'ANMF':
+            out.append(int.from_bytes(data[pos+8+12:pos+8+15], 'little') or FRAME_MS)
+        pos += 8 + size + (size & 1)
+    return out if len(out) == n else [FRAME_MS] * n
 
 def paper_offset(frame0):
     """How far this file's background sits from the deck's paper colour."""
@@ -54,6 +69,7 @@ def main(srcdir):
         n  = getattr(im, 'n_frames', 1)
         im.seek(0)
         off = paper_offset(im.convert('RGB'))
+        durs = frame_durations(pathlib.Path(src), n)
 
         # a first pass at default size tells us whether this one needs squeezing
         for px, q in ((ANIM_PX, ANIM_Q), (640, HEAVY_Q)):
@@ -65,7 +81,7 @@ def main(srcdir):
                     np.clip(np.array(f).astype(np.int16) + off, 0, 255).astype(np.uint8)))
             out = IMGDIR / name
             frames[0].save(out, save_all=True, append_images=frames[1:],
-                           duration=FRAME_MS, loop=0, quality=q, method=4)
+                           duration=durs, loop=0, quality=q, method=4)
             mb = out.stat().st_size / 1024 / 1024
             if mb <= 5 or q == HEAVY_Q:
                 break                      # good enough, or already the low setting
@@ -73,7 +89,7 @@ def main(srcdir):
         frames[0].resize((POSTER_PX, POSTER_PX), Image.LANCZOS).save(
             POSTER / name, 'WEBP', quality=POSTER_Q, method=6)
         total += mb
-        print(f'{name:22s} {n:3d} frames -> {mb:5.2f} MB')
+        print(f'{name:22s} {n:3d} frames  {sum(durs)/1000:4.1f} s loop -> {mb:5.2f} MB')
     print(f'\ntotal animation {total:.1f} MB in {IMGDIR}')
     print('now run:  python3 build.py')
 

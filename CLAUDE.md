@@ -56,9 +56,12 @@ cd build && python3 prepare-media.py ~/Desktop/"Headspring Robots"/robotica-17-w
 python3 build.py
 ```
 
-It resizes, recompresses, drops each file's background onto the deck's exact paper colour
+It resizes, recompresses, keeps each file's own per-frame timing (all 17 are 6-second loops,
+but the automaton runs 80–560 ms a frame, so a fixed frame rate would play it 2.5× too fast),
+drops each file's background onto the deck's exact paper colour
 (#F7F4EE — the originals arrive in slightly different off-whites and you can otherwise see
-the edge of every image), and writes the posters. Needs `pip3 install Pillow`.
+the edge of every image), and writes the posters. The current originals are the September 2026
+revision: eight pieces (08, 10–16) were re-animated by the illustrator. Needs `pip3 install Pillow`.
 
 ## Slide conventions
 
