@@ -234,7 +234,7 @@ dict(kind="bullets", act="Business impact", title="From CapEx to OpEx", art="lea
   src="IFR Service Robots 2025 · GXO, June 2024"),
 
 dict(kind="bullets", act="Business impact", title="Labour: the honest version", items=[
-  "the famous US study: one more robot per thousand workers costs <b>5.6 jobs</b> locally",
+  "the famous US study: one more robot per thousand workers costs <b>about 6 jobs</b> locally, 3 nationally",
   "the 2025 meta-analysis of 33 studies: average effect <b>−0.02</b>. negligible",
   "strongly negative in the United States, <b>positive</b> in other developed economies",
   "the effect is not a law of physics. it is a policy outcome"],
@@ -249,7 +249,7 @@ dict(kind="bullets", act="Business impact", title="And the shortage is real", ar
 
 dict(kind="bullets", act="Business impact", title="One date for your calendar", art="seal", items=[
   "the EU Machinery Regulation applies from <b>20 January 2027</b>",
-  "it replaces the 1996 Machinery Directive and covers AI in safety functions",
+  "it replaces the 2006 Machinery Directive and covers AI in safety functions",
   "the AI Act's machinery obligations were deferred to August 2028",
   "the nearer deadline is the one nobody is talking about"],
   src="Regulation (EU) 2023/1230 · EU Digital Omnibus, May 2026"),
