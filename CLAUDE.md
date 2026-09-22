@@ -68,6 +68,7 @@ From the `deck-una-idea` house style. Worth keeping:
 - Four bullets maximum, ~12 words each, lower case after the first word.
 - Illustration on the right, roughly 41% of the width. Never on anchor or data slides.
 - Anchor slides (`kind="anchor"`) are one big sentence, no illustration. Dark ones alternate.
+  `wide=True` sets one sentence per line without wrapping, for the rare three-line anchor.
 - Every figure carries its source in the `src` field, set in small grey type under the bullets.
 - Bullets are a short brass dash (14 px, 2 px thick), pure CSS — it echoes the rule under each title.
 

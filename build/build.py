@@ -59,7 +59,8 @@ def render(s, i):
         body = f'<blockquote>{s["text"]}</blockquote><p class="attrib">{s["src"]}</p>'
     elif k == 'anchor':
         kick = f'<p class="kicker">{s["kicker"]}</p>' if s.get('kicker') else ''
-        body = f'{kick}<p class="anchor">{s["text"]}</p>'
+        wide = ' wide' if s.get('wide') else ''
+        body = f'{kick}<p class="anchor{wide}">{s["text"]}</p>'
     elif k == 'data':
         body = (f'<p class="figure">{s["figure"]}</p><p class="figcap">{s["cap"]}</p>'
                 + src_line(s))
@@ -142,6 +143,7 @@ li b{font-weight:700}
 li i{font-style:italic}
 
 .anchor{font-size:58px;line-height:1.18;font-weight:600;letter-spacing:-.015em;max-width:22ch}
+.anchor.wide{max-width:none;font-size:50px;line-height:1.24;white-space:nowrap}  /* one sentence per line, no wrapping */
 blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max-width:24ch}
 .attrib{margin-top:34px;font-size:20px;color:var(--grey)}
 .figure{font-size:104px;font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--brass)}

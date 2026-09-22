@@ -17,7 +17,7 @@ dict(kind="bullets", act="The old longing", title="Talos", art="talos", items=[
   "bronze giant, forged by a god, patrolling Crete three times a day",
   "the first automaton in the Western imagination",
   "already the two obsessions: tireless labour and absolute obedience",
-  "and already the flaw — one plug at the ankle"]),
+  "and already the flaw — a single bronze nail at the ankle"]),
 
 dict(kind="bullets", act="The old longing", title="Pandora", art="pandora", items=[
   "made, not born. assembled by Hephaestus on commission",
@@ -40,8 +40,8 @@ dict(kind="bullets", act="The old longing", title="The right word", art="capek",
   "in the play the robots are organic, built to work, and they revolt",
   "we named the machine after the servitude, not the mechanism"]),
 
-dict(kind="anchor", act="The old longing",
-     text="Three thousand years of wanting it.<br>Three years of it starting to work."),
+dict(kind="anchor", act="The old longing", wide=True,
+     text="Three thousand years of wanting it.<br>Sixty years of it working behind a fence.<br>Three years of it starting to understand."),
 
 # ---------------- ACT II — WHERE WE ACTUALLY ARE ----------------
 dict(kind="bullets", act="Where we are", title="Four industrial revolutions", art="steam", items=[
