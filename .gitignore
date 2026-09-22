@@ -5,3 +5,4 @@ __pycache__/
 *.ytdl
 video/*.f*.mp4
 video/*.f*.m4a
+slides-review.md

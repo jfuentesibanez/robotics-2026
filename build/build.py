@@ -103,7 +103,6 @@ CSS = r"""
   --grey:#8A8378; --line:#DED6C7;
   --logo-cdp:LOGOCDP;
   --logo-hs:LOGOHS;
-  --gear:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M%2020.80%2012.00%20L%2023.35%2013.03%20L%2022.91%2015.29%20L%2020.16%2015.30%20L%2018.74%2017.66%20L%2020.03%2020.09%20L%2018.24%2021.54%20L%2016.13%2019.77%20L%2013.53%2020.67%20L%2012.95%2023.36%20L%2010.65%2023.32%20L%2010.17%2020.61%20L%207.60%2019.62%20L%205.43%2021.32%20L%203.69%2019.80%20L%205.07%2017.42%20L%203.73%2015.01%20L%200.98%2014.91%20L%200.62%2012.64%20L%203.21%2011.69%20L%203.73%208.99%20L%201.68%207.15%20L%202.87%205.17%20L%205.46%206.11%20L%207.60%204.38%20L%207.22%201.65%20L%209.40%200.90%20L%2010.78%203.29%20L%2013.53%203.33%20L%2014.99%201.00%20L%2017.14%201.82%20L%2016.66%204.54%20L%2018.74%206.34%20L%2021.36%205.49%20L%2022.48%207.51%20L%2020.37%209.28%20Z%20M%208.50%2012.00%20a%203.50%203.50%200%201%200%207.00%200%20a%203.50%203.50%200%201%200%20-7.00%200%20Z%22%2F%3E%3C%2Fsvg%3E");
   --sans:"Optima","Gill Sans","Gill Sans MT","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -133,13 +132,12 @@ h2::after{content:"";display:block;width:64px;height:3px;background:var(--brass)
 .cover-meta span{font-size:18px}
 
 ul{list-style:none}
-li{font-size:27px;line-height:1.38;margin-bottom:19px;padding-left:32px;position:relative;
+li{font-size:27px;line-height:1.38;margin-bottom:19px;padding-left:30px;position:relative;
   max-width:29ch}
 .slide:not(.has-art) li{max-width:44ch;font-size:29px;margin-bottom:24px}
-li::before{content:"";position:absolute;left:0;top:.46em;width:21px;height:21px;
-  background:var(--brass);-webkit-mask:var(--gear) center/contain no-repeat;
-  mask:var(--gear) center/contain no-repeat}
-.slide:not(.has-art) li::before{width:23px;height:23px;top:.42em}
+li::before{content:"";position:absolute;left:0;top:.72em;width:14px;height:2px;
+  background:var(--brass);border-radius:1px}
+.slide:not(.has-art) li::before{width:16px;top:.7em}
 li b{font-weight:700}
 li i{font-style:italic}
 

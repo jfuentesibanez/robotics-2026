@@ -69,7 +69,7 @@ From the `deck-una-idea` house style. Worth keeping:
 - Illustration on the right, roughly 41% of the width. Never on anchor or data slides.
 - Anchor slides (`kind="anchor"`) are one big sentence, no illustration. Dark ones alternate.
 - Every figure carries its source in the `src` field, set in small grey type under the bullets.
-- Bullets are a brass nine-tooth gear, drawn as CSS mask — no icon font, nothing to load.
+- Bullets are a short brass dash (14 px, 2 px thick), pure CSS — it echoes the rule under each title.
 
 Slide kinds in `slides.py`: `cover · quote · bullets · anchor · data · video · close`.
 Long slides shrink to fit automatically (`fitSlide()`), so a fifth bullet will not overflow —
