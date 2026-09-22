@@ -76,7 +76,7 @@ dict(kind="bullets", act="Where we are", title="How to read that number", items=
 
 dict(kind="data", act="Where we are", figure="1,220 vs 132",
      cap="robots per 10,000 manufacturing workers: South Korea against the world average",
-     src="IFR robot density, published April 2026 · reporting year 2024"),
+     src="IFR robot density, published April 2026 · reporting year 2024", map="KOR"),
 
 dict(kind="bullets", act="Where we are", title="Italy and Spain", items=[
   "<b>Italy: 8,783</b> robots installed in 2024, down 16% – still second in Europe, fifth in the world",

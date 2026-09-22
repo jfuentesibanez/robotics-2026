@@ -54,6 +54,28 @@ def art_block(name):
     return (f'<div class="art"><img class="art-img" src="{uri}" '
             f'data-anim="{ANIM[name]}" alt=""></div>')
 
+MAPDIR = HERE / 'maps'
+def map_svg(code):
+    """A country outline from maps/<code>.geo.json (Natural Earth 10m), as a brass line.
+    Equirectangular with the latitude corrected by cos(mid-lat), tiny islets dropped."""
+    import json, math
+    g = json.loads((MAPDIR / f'{code}.geo.json').read_text())['geometry']
+    polys = g['coordinates'] if g['type'] == 'MultiPolygon' else [g['coordinates']]
+    def area(r): return abs(sum(x0*y1 - x1*y0 for (x0,y0),(x1,y1) in zip(r, r[1:]+r[:1]))) / 2
+    rings = sorted((p[0] for p in polys), key=area, reverse=True)
+    big = rings[0]; rings = [r for r in rings if area(r) > area(big) * 0.003]
+    lat0 = sum(p[1] for p in big) / len(big); k = math.cos(math.radians(lat0))
+    pts = [(x*k, -y) for r in rings for x, y in r]
+    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+    W, H, pad = 600, 720, 18
+    sc = min((W-2*pad)/(max(xs)-min(xs)), (H-2*pad)/(max(ys)-min(ys)))
+    ox = (W - (max(xs)-min(xs))*sc)/2 - min(xs)*sc; oy = (H - (max(ys)-min(ys))*sc)/2 - min(ys)*sc
+    d = ''
+    for r in rings:
+        d += 'M' + 'L'.join(f'{x*k*sc+ox:.1f},{-y*sc+oy:.1f}' for x, y in r) + 'Z'
+    return (f'<svg class="map" viewBox="0 0 {W} {H}" role="img" aria-label="{code} outline">'
+            f'<path d="{d}"/></svg>')
+
 def chart_svg(s):
     """Line chart, one highlighted series in rust, the rest as grey context with
     direct labels at the line end. Static SVG, house fonts, no script."""
@@ -116,6 +138,9 @@ def render(s, i):
     elif k == 'data':
         body = (f'<p class="figure">{s["figure"]}</p><p class="figcap">{s["cap"]}</p>'
                 + src_line(s))
+        if s.get('map'):                     # a country outline on the right, brass line
+            cls.append('has-art')
+            body = f'<div class="col">{body}</div><div class="art">{map_svg(s["map"])}</div>'
     elif k == 'agenda':
         lis = ''.join(f'<li><span class="num">{ROMAN[j]}</span><span class="nm" data-go="{i}">{a}</span></li>'
                       for j, (a, i) in enumerate(ACTS))
@@ -226,6 +251,11 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
 .k-breath .inner{justify-content:center}
 .k-breath .art{flex:0 1 52%;max-height:560px}
 .k-breath .art img{max-height:540px}
+.map{width:100%;height:auto;max-height:520px;display:block}
+.map path{fill:#EFE9DB;stroke:var(--brass);stroke-width:2.5;stroke-linejoin:round;
+  vector-effect:non-scaling-stroke}
+.dark .map path{fill:#25221E;stroke:#E2B95C}
+.k-data.has-art .art{flex:0 1 36%}
 /* chart slides: house-style SVG line chart, rust highlight on grey context */
 .k-chart h2{margin-bottom:10px}
 .k-chart .src{margin-top:12px}
