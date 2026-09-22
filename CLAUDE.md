@@ -1,6 +1,6 @@
 # Robotics keynote — CDP / Headspring
 
-A 54-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
+A 55-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
 through Headspring. September 2026. Rebuilt and extended from a 2023 Spanish deck.
 
 ## The one rule
@@ -75,7 +75,9 @@ From the `deck-una-idea` house style. Worth keeping:
 - Every figure carries its source in the `src` field, set in small grey type under the bullets.
 - Bullets are a short brass dash (14 px, 2 px thick), pure CSS — it echoes the rule under each title.
 
-Slide kinds in `slides.py`: `cover · quote · bullets · anchor · data · video · close`.
+Slide kinds in `slides.py`: `cover · quote · bullets · anchor · data · chart · video · close`.
+A `chart` slide is a static SVG line chart drawn by `chart_svg()` in build.py from the numbers
+in `slides.py`: one highlighted series in rust, the rest in grey with labels at the line end.
 Long slides shrink to fit automatically (`fitSlide()`), so a fifth bullet will not overflow —
 but it will look cramped, which is the style telling you to split the slide.
 

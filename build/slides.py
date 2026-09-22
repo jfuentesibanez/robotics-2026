@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Slide model for "A Look at the Present and Future of Robotics" (EN, Sep 2026)
-# kind: cover | quote | bullets | anchor | data | video | close
+# kind: cover | quote | bullets | anchor | data | chart | video | close
 S = [
 dict(kind="cover", title="A Look at the Present<br>and Future of Robotics",
      who="Javier Fuentes Ibáñez", org="NCompany", date="September 2026", art="golem"),
@@ -65,6 +65,17 @@ dict(kind="bullets", act="Where we are", title="And by how it moves", art="wareh
 dict(kind="data", act="Where we are", figure="542,000",
      cap="industrial robots installed worldwide in a single year",
      src="IFR, World Robotics 2025 · reporting year 2024", dark=True),
+
+dict(kind="chart", act="Where we are", title="Where the robots went",
+     years=list(range(2011, 2025)), highlight="China",
+     series={
+       "China":         [23000,23000,37000,57000,69000,97000,156000,155000,148000,178000,268000,290000,276000,295000],
+       "Japan":         [28000,29000,25000,29000,35000,39000,46000,55000,50000,39000,47000,50000,46000,45000],
+       "United States": [21000,22000,24000,26000,28000,31000,33000,40000,33000,31000,35000,40000,38000,34000],
+       "South Korea":   [26000,19000,21000,25000,38000,41000,40000,38000,33000,31000,31000,32000,31000,31000],
+       "Germany":       [20000,18000,18000,20000,20000,20000,21000,27000,22000,22000,24000,26000,28000,27000]},
+     note="295,000 in 2024 — thirteen times 2011",
+     src="IFR World Robotics, via Our World in Data · new industrial robots installed per year, 2011–2024"),
 
 dict(kind="bullets", act="Where we are", title="How to read that number", items=[
   "operational stock worldwide: <b>4.66 million</b> robots, up 9%",

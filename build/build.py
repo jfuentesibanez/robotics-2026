@@ -42,6 +42,46 @@ def art_block(name):
     return (f'<div class="art"><img class="art-img" src="{uri}" '
             f'data-anim="{ANIM[name]}" alt=""></div>')
 
+def chart_svg(s):
+    """Line chart, one highlighted series in rust, the rest as grey context with
+    direct labels at the line end. Static SVG, house fonts, no script."""
+    W, H = 1060, 440
+    L, R, T, B = 96, 210, 28, 52          # plot margins: room for y labels and end labels
+    ys, ser, hl = s['years'], s['series'], s['highlight']
+    top = max(max(v) for v in ser.values()); ymax = ((top // 50000) + 1) * 50000
+    px = lambda i: L + i * (W - L - R) / (len(ys) - 1)
+    py = lambda v: T + (H - T - B) * (1 - v / ymax)
+    o = [f'<svg class="chart" viewBox="0 0 {W} {H}" role="img" aria-label="{html.escape(s["title"])}">']
+    for g in range(0, ymax + 1, 100000):           # recessive grid + y labels
+        y = py(g)
+        o.append(f'<line x1="{L}" y1="{y:.1f}" x2="{W-R}" y2="{y:.1f}" class="grid"/>')
+        o.append(f'<text x="{L-14}" y="{y+5:.1f}" class="ax" text-anchor="end">{g:,}</text>')
+    for i, yr in enumerate(ys):                     # x labels every third year, plus the last
+        if (yr - ys[0]) % 3 == 0 or yr == ys[-1]:
+            o.append(f'<text x="{px(i):.1f}" y="{H-18}" class="ax" text-anchor="middle">{yr}</text>')
+    o.append(f'<line x1="{L}" y1="{py(0):.1f}" x2="{W-R}" y2="{py(0):.1f}" class="axis"/>')
+    # context series first so the highlight sits on top; labels stacked without collisions
+    ends = sorted(((v[-1], k) for k, v in ser.items() if k != hl), reverse=True)
+    slots, last = [], -1e9
+    for v, k in ends:
+        y = max(py(v), last + 24); slots.append((k, py(v), y)); last = y
+    for k, v in ser.items():
+        if k == hl: continue
+        pts = ' '.join(f'{px(i):.1f},{py(y):.1f}' for i, y in enumerate(v))
+        o.append(f'<polyline points="{pts}" class="ctx"/>')
+    for k, y0, y in slots:
+        x0 = px(len(ys)-1)
+        o.append(f'<line x1="{x0+6}" y1="{y0:.1f}" x2="{x0+22}" y2="{y:.1f}" class="lead"/>')
+        o.append(f'<text x="{x0+28}" y="{y+5:.1f}" class="lbl">{k}</text>')
+    v = ser[hl]; pts = ' '.join(f'{px(i):.1f},{py(y):.1f}' for i, y in enumerate(v))
+    o.append(f'<polyline points="{pts}" class="hl"/>')
+    o.append(f'<circle cx="{px(len(ys)-1):.1f}" cy="{py(v[-1]):.1f}" r="7" class="dot"/>')
+    o.append(f'<text x="{px(len(ys)-1)+28:.1f}" y="{py(v[-1])+7:.1f}" class="hll">{hl}</text>')
+    if s.get('note'):
+        o.append(f'<text x="{px(len(ys)-1)-10:.1f}" y="{py(v[-1])-22:.1f}" class="note" text-anchor="end">{s["note"]}</text>')
+    o.append('</svg>')
+    return ''.join(o)
+
 def src_line(s):
     return f'<p class="src">{s["src"]}</p>' if s.get('src') else ''
 
@@ -64,6 +104,8 @@ def render(s, i):
     elif k == 'data':
         body = (f'<p class="figure">{s["figure"]}</p><p class="figcap">{s["cap"]}</p>'
                 + src_line(s))
+    elif k == 'chart':
+        body = f'<h2>{s["title"]}</h2>{chart_svg(s)}' + src_line(s)
     elif k == 'video':
         cls.append('k-video')
         body = (f'<div class="vwrap" data-vid="{s["vid"]}" data-slug="{s["slug"]}">'
@@ -156,6 +198,20 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
 .dark li::before{background:#E2B95C}
 .dark h2::after{background:#E2B95C}
 
+/* chart slides: house-style SVG line chart, rust highlight on grey context */
+.k-chart h2{margin-bottom:10px}
+.k-chart .src{margin-top:12px}
+.chart{width:100%;height:auto;display:block;font-family:var(--sans)}
+.chart .grid{stroke:var(--line);stroke-width:1;stroke-dasharray:3 5}
+.chart .axis{stroke:#C9C1B2;stroke-width:1.5}
+.chart .ax{font-size:15px;fill:var(--grey);letter-spacing:.02em}
+.chart .ctx{fill:none;stroke:#A9A297;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.chart .lead{stroke:#C9C1B2;stroke-width:1}
+.chart .lbl{font-size:16px;fill:#5E5850}
+.chart .hl{fill:none;stroke:var(--rust);stroke-width:4;stroke-linejoin:round;stroke-linecap:round}
+.chart .dot{fill:var(--rust);stroke:var(--paper);stroke-width:2.5}
+.chart .hll{font-size:19px;font-weight:600;fill:var(--rust)}
+.chart .note{font-size:16px;fill:var(--ink)}
 .k-video .inner{align-items:flex-start}
 .vwrap{width:100%}
 .vstage{position:relative;margin-top:6px;width:100%;max-width:980px;aspect-ratio:16/9;
