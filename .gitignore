@@ -6,3 +6,4 @@ __pycache__/
 video/*.f*.mp4
 video/*.f*.m4a
 slides-review.md
+richie-prompt.md
