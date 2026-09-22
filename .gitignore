@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+.claude/
+*.part
+*.ytdl
+video/*.f*.mp4
+video/*.f*.m4a
