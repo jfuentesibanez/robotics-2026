@@ -76,7 +76,10 @@ From the `deck-una-idea` house style. Worth keeping:
 - Every figure carries its source in the `src` field, set in small grey type under the bullets.
 - Bullets are a small hollow brass ring (9 px, 2 px stroke), pure CSS.
 
-Slide kinds in `slides.py`: `cover · agenda · quote · bullets · anchor · data · chart · video · breath · close`.
+Slide kinds in `slides.py`: `cover · agenda · quote · bullets · anchor · data · compare · chart · video · breath · close`.
+A `compare` slide puts two figures side by side with a rule between them and three notes under
+each: use it whenever the two numbers are not the same thing measured twice (different robots,
+different benchmarks), so an arrow never implies a like-for-like change.
 The `agenda` slide and the act rail at the top of every slide are built automatically from the
 `act` field, in order of first appearance (`ACTS` in build.py); `Close` is left out. Clicking an
 act in either jumps to its first slide.

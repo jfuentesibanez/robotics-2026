@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Slide model for "A Look at the Present and Future of Robotics" (EN, Sep 2026)
-# kind: cover | agenda | quote | bullets | anchor | data | chart | video | breath | close
+# kind: cover | agenda | quote | bullets | anchor | data | compare | chart | video | breath | close
 S = [
 dict(kind="cover", title="A Look at the Present<br>and Future of Robotics",
      who="Javier Fuentes Ibáñez", org="NCompany", date="Madrid · 24 September 2026", art="golem"),
@@ -143,15 +143,19 @@ dict(kind="bullets", act="AI meets robotics", title="Skills now move between bod
 dict(kind="video", act="AI meets robotics", title="Eight hours of demonstrations",
      vid="f6ChFc8eUuo", slug="03-figure-helix", label="Helix Logistics · Figure, February 2025"),
 
-dict(kind="data", act="AI meets robotics", figure="$90,000 → $29,900",
-     cap="what a full-size humanoid cost, April 2024 against October 2025",
-     src="Unitree H1 and H2 list prices", dark=True),
+dict(kind="compare", act="AI meets robotics", dark=True,
+     fig_a="$90,000", lbl_a="Unitree H1 · April 2024",
+     notes_a=["full-size humanoid, about 1.8 m", "legs and torso; no hands as standard", "the first humanoid you could simply order"],
+     fig_b="$29,900", lbl_b="Unitree H2 · October 2025",
+     notes_b=["full-size humanoid, about 1.8 m", "31 joints, dexterous hands optional", "a different, more capable machine"],
+     cap="not the same robot getting cheaper. the entry ticket to a full-size humanoid falling by two thirds in eighteen months",
+     src="Unitree list prices, H1 and H2"),
 
 dict(kind="bullets", act="AI meets robotics", title="The research bench collapsed too", art="scale", items=[
-  "2023: ALOHA, a capable bimanual rig, under <b>$20,000</b>",
-  "2026: an SO-101 leader-follower pair, around <b>€550</b>",
-  "a 450M-parameter policy trains on one consumer GPU",
-  "the barrier to trying this is now a rounding error"],
+  "2023: ALOHA, two bimanual arms and cameras, under <b>$20,000</b>",
+  "2026: SO-101, a desktop arm plus its teleoperation twin, around <b>€550</b>",
+  "not the same capability: a kettle against a tea bag. the same learning loop",
+  "a 450M-parameter policy trains on one consumer GPU. trying is a rounding error"],
   src="ALOHA, Apr 2023 · LeRobot, Feb 2026"),
 
 dict(kind="video", act="AI meets robotics", title="And the volume is Chinese",
@@ -164,9 +168,13 @@ dict(kind="bullets", act="AI meets robotics", title="Bigger is not the answer on
   "and fine-tuning to <b>your</b> task beats a generalist cold: 43.7% vs 17.7%"],
   src="VLA-Perf, Feb 2026 · SmolVLA, Jun 2025 · RoboChallenge, Oct 2025"),
 
-dict(kind="data", act="AI meets robotics", figure="89.4% → 12.4%",
-     cap="best success on 18 short tabletop tasks, then on 1,000 long household chores. both in simulation",
-     src="Stanford AI Index 2026 · RLBench, EquAct, January 2026 · BEHAVIOR-1K Challenge, 2025, top team"),
+dict(kind="compare", act="AI meets robotics",
+     fig_a="89.4%", lbl_a="RLBench · best method, January 2026",
+     notes_a=["18 short tabletop tasks: pick, stack, open", "100 demonstrations per task", "simulation, fixed scene"],
+     fig_b="12.4%", lbl_b="BEHAVIOR-1K · best team, 2025",
+     notes_b=["1,000 long household activities", "mobile manipulation, many objects, many steps", "simulated homes, held-out test"],
+     cap="two different benchmarks, two different winners. the gap between them is the gap between a lab task and a chore",
+     src="Stanford AI Index 2026 · RLBench, EquAct · BEHAVIOR Challenge 2025, Robot Learning Collective"),
 
 dict(kind="bullets", act="AI meets robotics", title="And they are slow", items=[
   "package sorting: <b>4× slower</b> than an average worker",
@@ -239,7 +247,7 @@ dict(kind="bullets", act="Business impact", title="Numbers to calibrate the answ
 
 dict(kind="bullets", act="Business impact", title="Labour: the honest version", items=[
   "the famous US study: one more robot per thousand workers costs <b>about 6 jobs</b> locally, 3 nationally",
-  "the 2025 meta-analysis of 33 studies: average effect <b>−0.02</b>. negligible",
+  "the 2025 meta-analysis of 33 studies: <b>−0.02</b>, a partial correlation between robots and jobs, where 0 is none and −1 is total. negligible",
   "strongly negative in the United States, <b>positive</b> in other developed economies",
   "the effect is not a law of physics. it is a policy outcome"],
   src="Acemoglu & Restrepo, JPE 2020 · Guarascio et al., J. Econ. Surveys 2025"),
@@ -305,9 +313,9 @@ dict(kind="bullets", act="On Monday", title="Demand three numbers", items=[
 # ---------------- CLOSE ----------------
 dict(kind="bullets", act="Close", title="Back to the Golem", art="hand-word", items=[
   "the clay was never the hard part. the word was",
-  "it obeyed exactly what was written, which is why it had to be stopped",
-  "we are about to hand instructions to machines that execute them literally",
-  "the engineering problem is solved faster than the instruction problem"]),
+  "the Golem obeyed to the letter. the new machines misread, and fail in ways you cannot predict",
+  "either way, the failure is in the instruction, not in the clay",
+  "your job: define the task, the measure of success, and when a person steps in"]),
 
 dict(kind="close", title="Thank you", mail="javier@ncompany.es", who="Javier Fuentes Ibáñez", org="NCompany"),
 ]

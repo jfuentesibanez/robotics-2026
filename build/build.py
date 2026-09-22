@@ -148,6 +148,13 @@ def render(s, i):
     elif k == 'breath':                      # illustration only: a pause between two heavy slides
         cls.append('has-art')
         body = art_block(s['art'])
+    elif k == 'compare':
+        def col(side):
+            notes = ''.join(f'<li>{x}</li>' for x in s.get('notes_'+side, []))
+            return (f'<div class="cmp-col"><p class="cmp-fig">{s["fig_"+side]}</p>'
+                    f'<p class="cmp-lbl">{s["lbl_"+side]}</p><ul class="cmp-notes">{notes}</ul></div>')
+        body = (f'<div class="cmp">{col("a")}<span class="cmp-rule"></span>{col("b")}</div>'
+                f'<p class="cmp-cap">{s["cap"]}</p>' + src_line(s))
     elif k == 'chart':
         body = f'<h2>{s["title"]}</h2>{chart_svg(s)}' + src_line(s)
     elif k == 'video':
@@ -256,6 +263,20 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
   vector-effect:non-scaling-stroke}
 .dark .map path{fill:#25221E;stroke:#E2B95C}
 .k-data.has-art .art{flex:0 1 36%}
+/* compare slides: two figures that are NOT the same thing, kept visibly apart */
+.cmp{display:flex;align-items:flex-start;gap:0 56px;width:100%}
+.cmp-col{flex:1 1 0;min-width:0}
+.cmp-rule{flex:0 0 1px;align-self:stretch;background:var(--line);margin-top:10px}
+.dark .cmp-rule{background:#3A362F}
+.cmp-fig{font-size:84px;font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--brass)}
+.dark .cmp-fig{color:#E2B95C}
+.cmp-lbl{font-size:26px;font-weight:600;line-height:1.25;margin-top:18px}
+.cmp-notes{margin-top:12px}
+.cmp-notes li{font-size:19px;line-height:1.4;margin-bottom:6px;padding-left:0;color:#5E5850;max-width:none}
+.cmp-notes li::before{display:none}
+.dark .cmp-notes li{color:#B5AD9F}
+.cmp-cap{font-size:24px;line-height:1.35;margin-top:34px;max-width:60ch}
+.k-compare .src{margin-top:18px}
 /* chart slides: house-style SVG line chart, rust highlight on grey context */
 .k-chart h2{margin-bottom:10px}
 .k-chart .src{margin-top:12px}
