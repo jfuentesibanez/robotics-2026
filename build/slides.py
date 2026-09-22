@@ -246,6 +246,13 @@ dict(kind="bullets", act="Business impact", title="And the shortage is real", ar
   "the question is not whether to automate. it is what, and in which order"],
   src="EURES Labour Shortages Report 2025 · Deloitte & The Manufacturing Institute, 2024"),
 
+dict(kind="bullets", act="Business impact", title="Follow the money", items=[
+  "OpenAI lists <b>27</b> robotics jobs, up from 11 in May. base pay $177,000 to $500,000",
+  "the best-paid role never touches a robot: it builds the training-data pipeline",
+  "the rest: actuator design, data-acquisition stations, a manager for data collection",
+  "the top lab treats robotics as a data problem. so should your budget"],
+  src="Business Insider, 18 September 2026 · OpenAI careers page · The Next Web"),
+
 dict(kind="bullets", act="Business impact", title="One date for your calendar", art="seal", items=[
   "the EU Machinery Regulation applies from <b>20 January 2027</b>",
   "it replaces the 2006 Machinery Directive and covers AI in safety functions",
