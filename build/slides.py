@@ -3,7 +3,7 @@
 # kind: cover | quote | bullets | anchor | data | chart | video | close
 S = [
 dict(kind="cover", title="A Look at the Present<br>and Future of Robotics",
-     who="Javier Fuentes Ibáñez", org="NCompany", date="September 2026", art="golem"),
+     who="Javier Fuentes Ibáñez", org="NCompany", date="Madrid · 24 September 2026", art="golem"),
 
 # ---------------- ACT I — THE OLD LONGING ----------------
 dict(kind="quote", act="The old longing",
