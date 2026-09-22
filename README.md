@@ -1,6 +1,6 @@
 # A Look at the Present and Future of Robotics
 
-English rebuild of the 2023 AJE Cádiz robotics talk. 58 slides, ~35–40 minutes.
+English rebuild of the 2023 AJE Cádiz robotics talk. 59 slides, ~35–40 minutes.
 
 ```
 robotics-2026.html     the deck — open it in any browser, double-click works
@@ -12,6 +12,11 @@ video/                 drop local copies of the clips here (optional)
 
 **Running it.** `←` `→` or click to move, `f` for fullscreen, click anywhere in the left
 quarter of the screen to go back. The deck scales to whatever screen it lands on.
+
+**Finding your way.** Slide 2 is the agenda: eight acts, click any of them to jump there. Every
+slide after it carries the same eight acts in small type across the top, with the current one in
+brass; that row is clickable too, so you can jump between acts without leaving the deck. The
+footer still names the act and the slide number.
 
 **Videos.** Nine clips, each behind a play button. `v` or a click plays the one on screen,
 full screen; `space` pauses, `←` `→` seek ten seconds, `Esc` stops and returns to the slide.

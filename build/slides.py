@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 # Slide model for "A Look at the Present and Future of Robotics" (EN, Sep 2026)
-# kind: cover | quote | bullets | anchor | data | chart | video | breath | close
+# kind: cover | agenda | quote | bullets | anchor | data | chart | video | breath | close
 S = [
 dict(kind="cover", title="A Look at the Present<br>and Future of Robotics",
      who="Javier Fuentes Ibáñez", org="NCompany", date="Madrid · 24 September 2026", art="golem"),
+
+dict(kind="agenda", title="The road"),
 
 # ---------------- ACT I — THE OLD LONGING ----------------
 dict(kind="quote", act="The old longing",

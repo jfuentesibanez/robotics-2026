@@ -29,6 +29,18 @@ TITLE = "A Look at the Present and Future of Robotics"
 FOOT  = "Robotics · present and future"
 DATE  = "September 2026"
 TOTAL = len(S)
+ACTS = []                                   # (act name, index of its first slide), talk order
+for _i, _s in enumerate(S):
+    _a = _s.get('act')
+    if _a and _a != 'Close' and all(_a != x for x, _ in ACTS):
+        ACTS.append((_a, _i))
+ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X']
+
+def rail(act):
+    """The breadcrumb: every act in small caps across the top, the current one lit."""
+    spans = ''.join(f'<span class="{"cur" if a == act else ""}" data-go="{i}">{a}</span>'
+                    for a, i in ACTS)
+    return f'<nav class="rail" aria-label="Sections">{spans}</nav>'
 LOGO = ('<div class="logorow">'
         '<div class="lg lg-cdp" role="img" aria-label="CDP"></div>'
         '<span class="lg-rule"></span>'
@@ -104,6 +116,10 @@ def render(s, i):
     elif k == 'data':
         body = (f'<p class="figure">{s["figure"]}</p><p class="figcap">{s["cap"]}</p>'
                 + src_line(s))
+    elif k == 'agenda':
+        lis = ''.join(f'<li><span class="num">{ROMAN[j]}</span><span class="nm" data-go="{i}">{a}</span></li>'
+                      for j, (a, i) in enumerate(ACTS))
+        body = f'<h2>{s["title"]}</h2><ol class="agenda">{lis}</ol>'
     elif k == 'breath':                      # illustration only: a pause between two heavy slides
         cls.append('has-art')
         body = art_block(s['art'])
@@ -140,8 +156,9 @@ def render(s, i):
     foot = ('' if k in ('cover',) else
             f'<footer><span class="fl-wrap">{FOOTLOGO}{act or FOOT} · {DATE}</span>'
             f'<span>{n} / {TOTAL}</span></footer>')
+    nav = rail(act) if k not in ('cover', 'agenda', 'close') else ''
     return (f'<section class="{" ".join(cls)}" id="s{n}">'
-            f'<div class="inner">{body}</div>{foot}</section>')
+            f'{nav}<div class="inner">{body}</div>{foot}</section>')
 
 sections = '\n'.join(render(s, i) for i, s in enumerate(S))
 
@@ -187,9 +204,9 @@ ul{list-style:none}
 li{font-size:27px;line-height:1.38;margin-bottom:19px;padding-left:30px;position:relative;
   max-width:29ch}
 .slide:not(.has-art) li{max-width:none;font-size:29px;margin-bottom:24px}
-li::before{content:"";position:absolute;left:0;top:.72em;width:14px;height:2px;
-  background:var(--brass);border-radius:1px}
-.slide:not(.has-art) li::before{width:16px;top:.7em}
+li::before{content:"";position:absolute;left:1px;top:.56em;width:9px;height:9px;
+  border:2px solid var(--brass);border-radius:50%;background:transparent}
+.slide:not(.has-art) li::before{width:10px;height:10px;top:.55em}
 li b{font-weight:700}
 li i{font-style:italic}
 
@@ -203,7 +220,7 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
 .dark{background:var(--ink);color:var(--paper)}
 .dark .figure{color:#E2B95C}
 .dark .src,.dark footer,.dark .attrib,.dark .cover-meta{color:#9A9287}
-.dark li::before{background:#E2B95C}
+.dark li::before{border-color:#E2B95C}
 .dark h2::after{background:#E2B95C}
 
 .k-breath .inner{justify-content:center}
@@ -255,6 +272,21 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
 .mail{margin-top:26px;font-size:34px}
 .mail a{color:var(--brass);text-decoration:none;border-bottom:2px solid var(--line)}
 
+.rail{position:absolute;left:84px;right:84px;top:26px;display:flex;gap:0 22px;flex-wrap:wrap;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#B5AD9F;line-height:1}
+.rail span{cursor:pointer;padding-bottom:6px;border-bottom:2px solid transparent;white-space:nowrap}
+.rail span.cur{color:var(--brass);border-color:var(--brass);font-weight:600}
+.rail span:hover{color:var(--ink)}
+.dark .rail{color:#5E5850}
+.dark .rail span.cur{color:#E2B95C;border-color:#E2B95C}
+.dark .rail span:hover{color:var(--paper)}
+ol.agenda{list-style:none;columns:2;column-gap:60px;max-width:960px}
+ol.agenda li{font-size:30px;line-height:1.25;margin-bottom:22px;padding-left:0;display:flex;
+  align-items:baseline;gap:18px;break-inside:avoid;max-width:none}
+ol.agenda li::before{display:none}
+ol.agenda .num{font-size:15px;letter-spacing:.14em;color:var(--brass);font-weight:600;min-width:34px}
+ol.agenda .nm{cursor:pointer;border-bottom:1px solid transparent}
+ol.agenda .nm:hover{border-color:var(--brass)}
 footer{position:absolute;left:84px;right:84px;bottom:30px;display:flex;
   justify-content:space-between;font-size:13px;color:var(--grey);
   border-top:1px solid var(--line);padding-top:14px;letter-spacing:.04em}
@@ -280,6 +312,7 @@ footer .fl-wrap{display:flex;align-items:center}
   .slide{position:relative;display:flex!important;width:1280px;height:720px;
     page-break-after:always;break-after:page}
   #bar,#help{display:none}
+  .rail{display:none}
 }
 """
 
@@ -420,6 +453,8 @@ addEventListener('keydown',e=>{
 });
 addEventListener('resize',fit);
 document.addEventListener('click',e=>{
+  const go=e.target.closest('[data-go]');
+  if(go){ e.stopPropagation(); show(parseInt(go.dataset.go)); return; }
   const st=e.target.closest('.vstage');
   if(st){ if(!st.classList.contains('playing')) playVideo(st.closest('.vwrap')); return; }
   if(e.target.closest('a'))return;

@@ -1,6 +1,6 @@
 # Robotics keynote — CDP / Headspring
 
-A 58-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
+A 59-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
 through Headspring. September 2026. Rebuilt and extended from a 2023 Spanish deck.
 
 ## The one rule
@@ -73,9 +73,12 @@ From the `deck-una-idea` house style. Worth keeping:
 - Anchor slides (`kind="anchor"`) are one big sentence, no illustration. Dark ones alternate.
   `wide=True` sets one sentence per line without wrapping, for the rare three-line anchor.
 - Every figure carries its source in the `src` field, set in small grey type under the bullets.
-- Bullets are a short brass dash (14 px, 2 px thick), pure CSS — it echoes the rule under each title.
+- Bullets are a small hollow brass ring (9 px, 2 px stroke), pure CSS.
 
-Slide kinds in `slides.py`: `cover · quote · bullets · anchor · data · chart · video · breath · close`.
+Slide kinds in `slides.py`: `cover · agenda · quote · bullets · anchor · data · chart · video · breath · close`.
+The `agenda` slide and the act rail at the top of every slide are built automatically from the
+`act` field, in order of first appearance (`ACTS` in build.py); `Close` is left out. Clicking an
+act in either jumps to its first slide.
 A `breath` slide is the illustration alone, no text: a pause after a heavy run, used once after
 the three uncomfortable conclusions.
 A `chart` slide is a static SVG line chart drawn by `chart_svg()` in build.py from the numbers
