@@ -27,7 +27,7 @@ because browsers block the embedded player from `file://` origins. Every video I
 against YouTube's API — all eight resolve to the official channel named on the slide.
 
 **Logos.** CDP and Headspring sit on the cover, divided by a hairline; Headspring repeats small
-in the footer of every slide, on an ivory chip where the slide is dark. Both are embedded in the
+in the footer of every slide, with its wordmark in paper colour where the slide is dark. Both are embedded in the
 HTML — nothing to install.
 
 **Illustrations — how the animation is handled.** The 18 pieces are six-second loops, 38 MB in

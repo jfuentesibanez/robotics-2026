@@ -15,6 +15,7 @@ def datauri_any(path, mime):
 
 LOGO_CDP = 'url("' + datauri_any(LOGODIR/'cdp.png', 'image/png') + '")'
 LOGO_HS  = 'url("' + datauri_any(LOGODIR/'headspring.png', 'image/png') + '")'
+LOGO_HSD = 'url("' + datauri_any(LOGODIR/'headspring-dark.png', 'image/png') + '")'  # wordmark in paper colour, for dark slides
 
 # Each illustration ships twice: the still frame is embedded in the HTML so the
 # deck renders instantly, the ~150-frame loop stays in img/ and is fetched when
@@ -103,6 +104,7 @@ CSS = r"""
   --grey:#8A8378; --line:#DED6C7;
   --logo-cdp:LOGOCDP;
   --logo-hs:LOGOHS;
+  --logo-hs-dark:LOGOHSD;
   --sans:"Optima","Gill Sans","Gill Sans MT","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -199,8 +201,7 @@ footer{position:absolute;left:84px;right:84px;bottom:30px;display:flex;
 .lg-rule{width:1px;height:38px;background:var(--line)}
 .foot-logo{display:inline-block;width:62px;height:19px;margin-right:13px;
   background:var(--logo-hs) left center/contain no-repeat;opacity:.9}
-.dark .foot-logo{background-color:var(--paper);border-radius:2px;
-  padding:3px 5px;box-sizing:content-box;opacity:.92}
+.dark .foot-logo{background-image:var(--logo-hs-dark);opacity:.95}
 footer .fl-wrap{display:flex;align-items:center}
 #bar{position:fixed;left:0;bottom:0;height:3px;background:var(--brass);
   width:0;transition:width .22s ease;z-index:9}
@@ -361,7 +362,7 @@ show(location.hash?parseInt(location.hash.slice(2))-1||0:0);
 setTimeout(prefetchAll,1500);
 """
 
-CSS = CSS.replace('LOGOCDP', LOGO_CDP).replace('LOGOHS', LOGO_HS)
+CSS = CSS.replace('LOGOCDP', LOGO_CDP).replace('LOGOHSD', LOGO_HSD).replace('LOGOHS', LOGO_HS)
 
 doc = f"""<!doctype html>
 <html lang="en">
