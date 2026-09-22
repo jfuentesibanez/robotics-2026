@@ -79,7 +79,7 @@ The arc is the one you built: ancient longing → the word → industrial revolu
 is → unmet expectations → AI meets robotics → business impact. Kept, translated, and extended.
 
 Added:
-- **The Golem**, alongside Talos and Pandora — Meyrink's 1915 novel, and the callback at the
+- **The Golem**, alongside Talos and Pandora — the Prague legend, dated honestly, and the callback at the
   close: it never disobeys, which is exactly the problem.
 - **A 15-slide block on 2023–2026** that did not exist before: RT-2 to Helix 2.5, skills
   transferring between bodies, the Unitree price collapse, why small models still matter, and

@@ -26,9 +26,9 @@ dict(kind="bullets", act="The old longing", title="Pandora", art="pandora", item
   "we have never told this story neutrally"]),
 
 dict(kind="bullets", act="The old longing", title="The Golem", art="golem", items=[
-  "Prague, sixteenth century: clay shaped into a servant",
-  "animated by a word placed in its mouth",
-  "Gustav Meyrink, <i>Der Golem</i>, 1915: it returns every thirty-three years",
+  "the legend of Prague: clay shaped into a servant by Rabbi Loew",
+  "animated by a word placed in its mouth. take the word out, and it is clay again",
+  "set in the 1500s, written down in the 1800s, made famous by Meyrink's 1915 novel",
   "it does not rebel. it does exactly what it was told"]),
 
 dict(kind="anchor", act="The old longing", dark=True,
