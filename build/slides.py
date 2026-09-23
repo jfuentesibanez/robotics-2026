@@ -216,8 +216,8 @@ dict(kind="bullets", act="Evidence", title="Same eighteen months, the failures",
   src="The Robot Report, Reuters, company statements 2025–2026"),
 
 dict(kind="data", act="Evidence", figure="22,000",
-     cap="humanoid robots shipped in the first half of 2026: up nearly 300%, and 86% from Chinese vendors",
-     src="Counterpoint Research, 20 August 2026", dark=True),
+     cap="humanoid robots shipped in the first half of 2026: more than in all of 2025, and 86% from Chinese vendors",
+     src="Counterpoint Research, 20 August 2026 · 2025 total about 16,000, Counterpoint", dark=True),
 
 dict(kind="video", act="Evidence", title="Meanwhile, the revolution that already happened",
      vid="7SvTdW4OLUQ", slug="08-amazon-robots", label="The full Amazon robot line-up · Amazon News – one million robots deployed"),
@@ -238,10 +238,10 @@ dict(kind="bullets", act="Business impact", title="From CapEx to OpEx", art="lea
 
 dict(kind="bullets", act="Business impact", title="Numbers to calibrate the answer", art="steam", items=[
   "an industrial arm pays back in <b>18–36 months</b>; a cobot cell in 12–18",
-  "Digit, by Agility: about <b>$8,500 a month</b>, plus $25,000 to deploy",
-  "Agility compares it with a worker at <b>$30 an hour</b>, all included",
+  "Agility's Digit: $8,500 a month, about <b>$27 an hour</b> at two shifts",
+  "but on package sorting it works at about <b>a quarter</b> of human speed",
   "labour per hour, 2025: Italy €32 · Spain €26 · Germany €45 · EU €35"],
-  src="integrator benchmarks 2026 · Agility Robotics investor deck, June 2026 · The Robot Report · Eurostat, March 2026"),
+  src="integrator benchmarks 2026 · Agility investor deck, June 2026 · our estimate: 336 h a month, plus $25,000 deploy fee over 36 months · Epoch AI, Feb 2026 · Eurostat, March 2026"),
 
 dict(kind="bullets", act="Business impact", title="Labour: the honest version", items=[
   "a famous US study: each new robot cost <b>about 6 jobs</b> in its own area, and 3 in the whole country",

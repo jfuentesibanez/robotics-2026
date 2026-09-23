@@ -148,6 +148,9 @@ change its source line with it. Two are worth flagging under questioning:
 
 - **Humanoid shipments, H1 2026.** The slide uses Counterpoint's numbers: 22,000+ units, up
   nearly 300%, 86% from Chinese vendors, Agibot and Unitree first and second (20 August 2026).
+  The caption compares it with Counterpoint's 2025 full-year figure of about 16,000 installations
+  (so: more in one half-year than in all of 2025); 2025 is counted as installations, 2026 as
+  shipments, close enough for the claim.
   A rival estimate from Smart Analytics Global (19,100, +272%, 97% Chinese) circulated via Forbes
   the same week; do not mix the two.
 - **Tesla Optimus.** The slide quotes Musk on the Q4 2025 call, 28 January 2026: "It's not in
@@ -161,6 +164,9 @@ change its source line with it. Two are worth flagging under questioning:
 - **Hourly labour cost 2025** (Eurostat lc_lci_lev, whole economy, March 2026): EU €34.9,
   Germany €45.0, Italy €32.0, Spain €26.4. Agility's $8,500/month RaaS price and $25,000
   deployment fee are from its June 2026 SPAC investor deck as reported by The Robot Report.
+  The slide's "about $27 an hour" is our own estimate: $8,500 a month plus the $25,000 fee spread
+  over 36 months (~$700), divided by two shifts (336 hours a month). The "quarter of human speed"
+  is Epoch AI's package-sorting finding (about 4× slower than an average worker).
 
 - **Acemoglu & Restrepo (JPE 2020), US 1990–2007.** Each additional robot reduced employment by
   about 6 workers in its commuting zone and about 3.3 nationally; one more robot per thousand
