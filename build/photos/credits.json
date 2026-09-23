@@ -1,0 +1,58 @@
+[
+ {
+  "slug": "01-arms",
+  "caption": "arms · car body shop",
+  "file": "File:BMW Leipzig MEDIA 050719 Download Karosseriebau max.jpg",
+  "author": "BMW Werk Leipzig",
+  "license": "CC BY-SA 2.0 de",
+  "url": "https://commons.wikimedia.org/wiki/File:BMW_Leipzig_MEDIA_050719_Download_Karosseriebau_max.jpg"
+ },
+ {
+  "slug": "02-delta",
+  "caption": "delta · picking",
+  "file": "File:Robot delta FlexPicker d'ABB.png",
+  "author": "Marc Auledas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Robot_delta_FlexPicker_d%27ABB.png"
+ },
+ {
+  "slug": "03-warehouse",
+  "caption": "wheels · warehouse",
+  "file": "File:Amazon warehouse robot 2020.JPG",
+  "author": "Geni",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Amazon_warehouse_robot_2020.JPG"
+ },
+ {
+  "slug": "04-quadruped",
+  "caption": "legs · quadruped",
+  "file": "File:Spot by Boston Dynamics.jpg",
+  "author": "Jonte",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Spot_by_Boston_Dynamics.jpg"
+ },
+ {
+  "slug": "05-humanoid",
+  "caption": "legs · humanoid",
+  "file": "File:Unitree G1.jpg",
+  "author": "Sayanesy",
+  "license": "CC0",
+  "url": "https://commons.wikimedia.org/wiki/File:Unitree_G1.jpg"
+ },
+ {
+  "slug": "06-drone",
+  "caption": "air · drone",
+  "file": "File:Quadcopter camera drone in flight.jpg",
+  "author": "Josh Sorenson",
+  "license": "CC0",
+  "url": "https://commons.wikimedia.org/wiki/File:Quadcopter_camera_drone_in_flight.jpg"
+ },
+ {
+  "slug": "07-underwater",
+  "caption": "water · deep-sea vehicle",
+  "file": "File:Nereus (underwater vehicle) hydro20100720-full.jpg",
+  "author": "NASA/JPL",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Nereus_(underwater_vehicle)_hydro20100720-full.jpg"
+ }
+]

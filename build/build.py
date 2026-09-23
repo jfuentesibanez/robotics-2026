@@ -25,6 +25,30 @@ for _f in sorted(POSTERDIR.glob('*.webp')):
     _key = _f.stem.split('-', 1)[1]
     ART[_key]  = datauri_any(_f, 'image/webp')
     ANIM[_key] = 'img/' + _f.name
+# Photos for polaroid stacks: build/photos/<slug>.webp, credits in photos/credits.json
+import json as _json
+PHOTODIR = HERE / 'photos'
+PHOTO, PHOTOCRED = {}, {}
+if (PHOTODIR / 'credits.json').exists():
+    for _c in _json.loads((PHOTODIR / 'credits.json').read_text()):
+        PHOTO[_c['slug']] = datauri_any(PHOTODIR / (_c['slug'] + '.webp'), 'image/webp')
+        PHOTOCRED[_c['slug']] = _c
+# scattered resting places for up to seven prints: left %, top %, rotation
+PILE = [(2,-1,-7), (56,-2,6), (-4,26,5), (29,22,-3), (62,25,-6), (8,53,-4), (51,54,7)]
+
+def polaroids(slugs):
+    cards = ''
+    for j, sl in enumerate(slugs):
+        x, y, r = PILE[j]
+        cards += (f'<figure class="pol" style="left:{x}%;top:{y}%;--r:{r}deg;--d:{0.35+j*0.45:.2f}s">'
+                  f'<img src="{PHOTO[sl]}" alt="{html.escape(PHOTOCRED[sl]["caption"])}">'
+                  f'<figcaption>{PHOTOCRED[sl]["caption"]}</figcaption></figure>')
+    return f'<div class="art pile">{cards}</div>'
+
+def photo_credits(slugs):
+    return 'photos: Wikimedia Commons · ' + ' · '.join(
+        f'{PHOTOCRED[s]["author"]}, {PHOTOCRED[s]["license"]}' for s in slugs)
+
 TITLE = "A Look at the Present and Future of Robotics"
 FOOT  = "Robotics · present and future"
 DATE  = "September 2026"
@@ -176,10 +200,14 @@ def render(s, i):
                 f'<a class="vlink" href="{link}" target="_blank" rel="noopener">{ltxt}</a></div>')
     elif k == 'bullets':
         lis = ''.join(f'<li>{b}</li>' for b in s['items'])
-        has = bool(s.get('art'))
+        pol = s.get('polaroids')
+        has = bool(s.get('art') or pol)
         if has: cls.append('has-art')
-        body = (f'<div class="col"><h2>{s["title"]}</h2><ul>{lis}</ul>{src_line(s)}</div>'
-                + (art_block(s['art']) if has else ''))
+        src = src_line(s)
+        if pol:
+            src += f'<p class="src cred">{photo_credits(pol)}</p>'
+        body = (f'<div class="col"><h2>{s["title"]}</h2><ul>{lis}</ul>{src}</div>'
+                + (polaroids(pol) if pol else art_block(s['art']) if has else ''))
     elif k == 'close':
         body = (f'<h1 class="cover-title">{s["title"]}</h1>'
                 f'<p class="mail"><a href="mailto:{s["mail"]}">{s["mail"]}</a></p>'
@@ -277,6 +305,21 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
 .dark .cmp-notes li{color:#B5AD9F}
 .cmp-cap{font-size:24px;line-height:1.35;margin-top:34px;max-width:60ch}
 .k-compare .src{margin-top:18px}
+/* polaroid stack: prints drop in one after another and settle into a loose pile */
+.pile{position:relative;height:540px;align-self:center;flex:0 1 46%!important;max-height:none!important}
+.pol{position:absolute;width:37%;margin:0;background:#FDFCF8;padding:6% 6% 19%;
+  box-shadow:0 1px 2px rgba(0,0,0,.12),0 8px 22px rgba(40,30,15,.18);
+  transform:rotate(var(--r));animation:drop .7s cubic-bezier(.2,.8,.3,1.05) var(--d) both}
+.pol img{display:block;width:100%;aspect-ratio:1;object-fit:cover;filter:saturate(.9) contrast(1.02)}
+.pol figcaption{position:absolute;left:6%;right:6%;bottom:4%;text-align:center;
+  font-family:"Bradley Hand","Noteworthy","Segoe Print","Comic Sans MS",cursive;
+  font-size:16px;color:#3A3630;line-height:1.1;white-space:nowrap}
+@keyframes drop{
+  0%{opacity:0;transform:translate(60px,-140px) rotate(calc(var(--r) + 22deg)) scale(1.3)}
+  65%{opacity:1;transform:translate(0,5px) rotate(calc(var(--r) - 1.5deg)) scale(.98)}
+  100%{opacity:1;transform:translate(0,0) rotate(var(--r)) scale(1)}}
+@media (prefers-reduced-motion:reduce){.pol{animation:none}}
+.src.cred{margin-top:6px;font-size:12px}
 /* chart slides: house-style SVG line chart, rust highlight on grey context */
 .k-chart h2{margin-bottom:10px}
 .k-chart .src{margin-top:12px}
@@ -363,6 +406,7 @@ footer .fl-wrap{display:flex;align-items:center}
   .slide{position:relative;display:flex!important;width:1280px;height:720px;
     page-break-after:always;break-after:page}
   #bar,#help{display:none}
+  .pol{animation:none}
   .rail{display:none}
 }
 """

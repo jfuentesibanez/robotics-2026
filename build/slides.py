@@ -46,7 +46,8 @@ dict(kind="anchor", act="The old longing", wide=True,
      text="Three thousand years of wanting it.<br>Sixty years of it working behind a fence.<br>Three years of it starting to understand."),
 
 # ---------------- ACT II — WHERE WE ACTUALLY ARE ----------------
-dict(kind="bullets", act="Where we are", title="What a robot is today", art="arm", items=[
+dict(kind="bullets", act="Where we are", title="What a robot is today",
+     polaroids=["01-arms","02-delta","03-warehouse","04-quadruped","05-humanoid","06-drone","07-underwater"], items=[
   "<b>industrial</b>: bolted down, fenced off, one task, decades of service",
   "<b>service</b>: mobile, among people, many tasks, short life",
   "arms build cars; wheels, legs and tracks come to you; drones go where you cannot",
