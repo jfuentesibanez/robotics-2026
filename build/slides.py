@@ -314,7 +314,7 @@ dict(kind="bullets", act="On Monday", title="Demand three numbers", items=[
   "a vendor who cannot give you all three is selling a video, not a robot"]),
 
 # ---------------- CLOSE ----------------
-dict(kind="bullets", act="Close", title="Back to the Golem", art="hand-word", items=[
+dict(kind="bullets", act="Close", title="Back to the Golem", art="golem", items=[
   "the clay was never the hard part. the word was",
   "the Golem obeyed to the letter. the new machines misread, and fail in ways you cannot predict",
   "either way, the failure is in the instruction, not in the clay",
