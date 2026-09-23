@@ -1,6 +1,6 @@
 # Robotics keynote — CDP / Headspring
 
-A 62-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
+A 61-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
 through Headspring. September 2026. Rebuilt and extended from a 2023 Spanish deck.
 
 ## The one rule
@@ -21,7 +21,7 @@ It writes `../robotics-2026.html`. Takes about a second.
 robotics-2026.html   generated — the deck
 index.html           generated — redirects to the deck, so the Pages URL needs no file name
 img/                 19 animated illustrations (~35 MB) — must sit beside the HTML
-video/               the eleven clips, H.264 mp4 (~375 MB) — play inside the deck
+video/               the ten clips, H.264 mp4 (~355 MB) — play inside the deck
 build/
   slides.py          all slide content, in order. This is the file you usually want
   build.py           renderer: CSS, JS, slide templates
@@ -109,7 +109,7 @@ but it will look cramped, which is the style telling you to split the slide.
 
 ## Videos
 
-Eleven clips. `v` or a click plays the one on screen, full screen; `space` pauses, arrows seek,
+Ten clips. `v` or a click plays the one on screen, full screen; `space` pauses, arrows seek,
 `Esc` stops. Three paths, picked automatically:
 
 1. a local file at `video/<slug>.mp4` or `.webm` → plays inside the deck, full screen, offline.
@@ -128,6 +128,9 @@ slide carries `link=` instead of `vid=` and the fallback opens that page.
 `11-xpeng-iron` is a 100-second excerpt of XPENG's 5:43 official video (4i22XO_HJB8): its three
 demo sections with their title cards, 0:15–1:00, 2:00–2:25 and 3:00–3:30, re-encoded; the
 presenter's explanations are cut. The slide label says "excerpt".
+
+There is no `02-*` clip: the Gemini Robotics 1.5 video was cut in September 2026 because it
+repeated what RT-2 and Helix 2.5 already show.
 
 GitHub's hard limit is 100 MiB per file; the Amazon clip is 95.6 MiB. Do not re-download it at
 a higher setting.

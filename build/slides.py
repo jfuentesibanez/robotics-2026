@@ -103,7 +103,7 @@ dict(kind="bullets", act="AI meets robotics", title="2023", art="brain-gear", it
   "generalisation meant new objects, not a new building"],
   src="Google DeepMind, RT-2, July 2023"),
 
-dict(kind="video", act="AI meets robotics", title="Pick up the extinct animal",
+dict(kind="video", act="AI meets robotics", title="Move the banana to Germany",
      link="https://robotics-transformer2.github.io/", slug="09-rt2-2023",
      label="RT-2 demonstrations · Google DeepMind, July 2023 · silent footage"),
 
@@ -120,9 +120,6 @@ dict(kind="video", act="AI meets robotics", title="Thirty homes, one model",
 dict(kind="data", act="AI meets robotics", figure="56%",
      cap="an extraordinary research result. and a product number no plant manager would accept",
      src="Figure, Helix 2.5, September 2026 · company-reported"),
-
-dict(kind="video", act="AI meets robotics", title="Reasoning before acting",
-     vid="UObzWjPb6XM", slug="02-gemini-robotics", label="Gemini Robotics 1.5 · Google DeepMind, September 2025"),
 
 dict(kind="anchor", act="AI meets robotics", dark=True,
      text="Robots stopped being programmed.<br>They started being trained."),
