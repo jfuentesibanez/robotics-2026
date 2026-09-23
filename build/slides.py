@@ -135,7 +135,7 @@ dict(kind="video", act="AI meets robotics", title="Same trick, other end of the 
      vid="4i22XO_HJB8", slug="11-xpeng-iron", label="XPENG Robotics Real-World Interaction Test · XPENG, September 2026 · 100-second excerpt of the official demo"),
 
 dict(kind="bullets", act="AI meets robotics", title="Skills now move between bodies", art="hand-word", items=[
-  "a skill learned on one arm transfers to a different robot entirely",
+  "a skill learned on lab arms ran on a humanoid it had never seen",
   "no re-engineering, no per-platform specialisation",
   "a model folded a shirt on a bimanual arm it had never trained on",
   "the skill stopped being a property of the machine"],
