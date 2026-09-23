@@ -1,6 +1,6 @@
 # Robotics keynote — CDP / Headspring
 
-A 59-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
+A 60-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
 through Headspring. September 2026. Rebuilt and extended from a 2023 Spanish deck.
 
 ## The one rule
@@ -161,6 +161,11 @@ change its source line with it. Two are worth flagging under questioning:
 - **Hourly labour cost 2025** (Eurostat lc_lci_lev, whole economy, March 2026): EU €34.9,
   Germany €45.0, Italy €32.0, Spain €26.4. Agility's $8,500/month RaaS price and $25,000
   deployment fee are from its June 2026 SPAC investor deck as reported by The Robot Report.
+
+- **Acemoglu & Restrepo (JPE 2020), US 1990–2007.** Each additional robot reduced employment by
+  about 6 workers in its commuting zone and about 3.3 nationally; one more robot per thousand
+  workers lowered the employment-to-population ratio by ~0.2 points and wages by ~0.4%. The slide
+  uses the per-robot figures only. Do not mix the two framings.
 
 ## Deploying
 

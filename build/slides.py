@@ -244,7 +244,7 @@ dict(kind="bullets", act="Business impact", title="Numbers to calibrate the answ
   src="integrator benchmarks 2026 · Agility Robotics investor deck, June 2026 · The Robot Report · Eurostat, March 2026"),
 
 dict(kind="bullets", act="Business impact", title="Labour: the honest version", items=[
-  "the famous US study: one more robot per thousand workers costs <b>about 6 jobs</b> locally, 3 nationally",
+  "a famous US study: each new robot cost <b>about 6 jobs</b> in its own area, and 3 in the whole country",
   "the 2025 meta-analysis of 33 studies: <b>−0.02</b>, a partial correlation between robots and jobs, where 0 is none and −1 is total. negligible",
   "strongly negative in the United States, <b>positive</b> in other developed economies",
   "the effect is not a law of physics. it is a policy outcome"],
@@ -270,6 +270,13 @@ dict(kind="bullets", act="Business impact", title="One date for your calendar", 
   "the AI Act's machinery obligations were deferred to August 2028",
   "the nearer deadline is the one nobody is talking about"],
   src="Regulation (EU) 2023/1230 · EU Digital Omnibus, May 2026"),
+
+dict(kind="bullets", act="Business impact", title="What the new rules mean for you", items=[
+  "AI that controls a safety function can no longer be self-certified: an outside body must check it",
+  "add an AI robot to an existing line and you may become its legal manufacturer",
+  "cybersecurity becomes a safety rule: a machine that can be hacked is not safe",
+  "machines sold before 20 January 2027 keep the old rules. new ones do not"],
+  src="Regulation (EU) 2023/1230: Annex I Part A, Art. 18 (substantial modification), Annex III 1.1.9"),
 
 # ---------------- ACT VII — UNCOMFORTABLE CONCLUSIONS ----------------
 dict(kind="anchor", act="Uncomfortable conclusions", kicker="Uncomfortable conclusion 1", dark=True,
