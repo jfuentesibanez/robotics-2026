@@ -157,14 +157,14 @@ dict(kind="compare", act="AI meets robotics",
      notes_a=["cost of a fixed level of AI performance", "47% cheaper every quarter", "faster than compute, batteries or electricity ever fell"],
      fig_b="3×", lbl_b="cheaper in 18 months: the price of a body · 2024–25",
      notes_b=["entry ticket to a full-size humanoid", "$90,000 to $29,900, two different machines", "fast for hardware. slow next to the brain"],
-     cap="the brain is getting cheap faster than any technology in history. the body is not. that gap is where the waiting is",
+     cap="the brain is getting cheap faster than any technology in history. the body is not. that gap is why robots still lag behind AI",
      src="Epoch AI, The plunging price of thought, 2026 · Unitree list prices"),
 
-dict(kind="bullets", act="AI meets robotics", title="The research bench collapsed too", art="scale", items=[
-  "2023: ALOHA, two bimanual arms and cameras, under <b>$20,000</b>",
-  "2026: SO-101, a desktop arm plus its teleoperation twin, around <b>€550</b>",
-  "not the same capability: a kettle against a tea bag. the same learning loop",
-  "a 450M-parameter policy trains on one consumer GPU. trying is a rounding error"],
+dict(kind="bullets", act="AI meets robotics", title="Research robots got cheap too", art="scale", items=[
+  "2023: ALOHA, two arms with cameras, under <b>$20,000</b>",
+  "2026: SO-101, a small desk arm and its twin, around <b>€550</b>",
+  "less capable, but it learns in the same way",
+  "a small model trains on one gaming GPU: trying costs almost nothing"],
   src="ALOHA, Apr 2023 · LeRobot, Feb 2026"),
 
 dict(kind="video", act="AI meets robotics", title="And the volume is Chinese",
@@ -202,7 +202,7 @@ dict(kind="video", act="Evidence", title="See it before you judge it",
      vid="xLVm-QKEZSI", slug="07-bmw-figure", label="Figure 02 at BMW Group Plant Spartanburg · BMW Group"),
 
 dict(kind="bullets", act="Evidence", title="And then they came back", items=[
-  "the retired fleet was scratched, scuffed and grimy",
+  "the retired fleet was scratched, worn and dirty",
   "the recurring hardware failure was the forearm",
   "this is what a real deployment looks like at the end",
   "every demo you have ever seen was filmed on day one"],
@@ -239,7 +239,7 @@ dict(kind="bullets", act="Business impact", title="From CapEx to OpEx", art="lea
 dict(kind="bullets", act="Business impact", title="Numbers to calibrate the answer", art="steam", items=[
   "an industrial arm pays back in <b>18–36 months</b>; a cobot cell in 12–18",
   "Digit, by Agility: about <b>$8,500 a month</b>, plus $25,000 to deploy",
-  "its own yardstick: a fully loaded worker at <b>$30 an hour</b>",
+  "Agility compares it with a worker at <b>$30 an hour</b>, all included",
   "labour per hour, 2025: Italy €32 · Spain €26 · Germany €45 · EU €35"],
   src="integrator benchmarks 2026 · Agility Robotics investor deck, June 2026 · The Robot Report · Eurostat, March 2026"),
 
@@ -306,7 +306,7 @@ dict(kind="bullets", act="On Monday", title="Demand three numbers", items=[
   "<b>hours</b> of unattended operation, at a named site",
   "<b>intervention rate</b>: how often a human had to step in",
   "<b>cycle time</b> against your current human baseline",
-  "a vendor who cannot give you all three is selling a film"]),
+  "a vendor who cannot give you all three is selling a video, not a robot"]),
 
 # ---------------- CLOSE ----------------
 dict(kind="bullets", act="Close", title="Back to the Golem", art="hand-word", items=[
