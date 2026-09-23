@@ -288,8 +288,6 @@ dict(kind="anchor", act="Uncomfortable conclusions", kicker="Uncomfortable concl
 dict(kind="anchor", act="Uncomfortable conclusions", kicker="Uncomfortable conclusion 3", dark=True,
      text="The bottleneck is data,<br>and your operation is where it lives."),
 
-dict(kind="breath", act="Uncomfortable conclusions", art="warehouse"),
-
 # ---------------- ACT VIII — MONDAY ----------------
 dict(kind="bullets", act="On Monday", title="Pick a task, not a robot", items=[
   "write down the five tasks that cost you most in overtime and injuries",

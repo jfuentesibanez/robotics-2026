@@ -1,6 +1,6 @@
 # Robotics keynote — CDP / Headspring
 
-A 60-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
+A 59-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
 through Headspring. September 2026. Rebuilt and extended from a 2023 Spanish deck.
 
 ## The one rule
@@ -100,8 +100,8 @@ is the one exception to the free-licence rule: a frame from Columbia's *Jason an
 The Pandora pin is the Niobid Painter's calyx krater (British Museum, c. 460 BC), photo by
 ArchaiOptix, CC BY-SA 4.0: Pandora is shown frontally, which Greek vase painters kept for the
 dead, the possessed and the not-quite-human. Each pin's credit line lives in `credits.json`.
-A `breath` slide is the illustration alone, no text: a pause after a heavy run, used once after
-the three uncomfortable conclusions.
+A `breath` slide is the illustration alone, no text: a pause after a heavy run. Not currently
+used; the one after the uncomfortable conclusions was cut.
 A `chart` slide is a static SVG line chart drawn by `chart_svg()` in build.py from the numbers
 in `slides.py`: one highlighted series in rust, the rest in grey with labels at the line end.
 Long slides shrink to fit automatically (`fitSlide()`), so a fifth bullet will not overflow —
