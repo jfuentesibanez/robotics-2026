@@ -190,9 +190,6 @@ dict(kind="video", act="AI meets robotics", title="What autonomy looks like",
 dict(kind="video", act="AI meets robotics", title="And what it does not",
      vid="LTYMWadOW7c", slug="06-1x-neo", label="NEO The Home Robot · 1X – shipped with human teleoperators in the loop"),
 
-dict(kind="anchor", act="AI meets robotics",
-     text="Ask for the intervention rate.<br>Ask for the hours. Ask for the site."),
-
 # ---------------- ACT V — WHAT WORKED, WHAT DIDN'T ----------------
 dict(kind="bullets", act="Evidence", title="The best-evidenced deployment there is", art="factory", items=[
   "Figure 02 at BMW Spartanburg, eleven months, ten-hour shifts",
