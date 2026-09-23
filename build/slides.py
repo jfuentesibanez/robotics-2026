@@ -208,7 +208,7 @@ dict(kind="bullets", act="Evidence", title="And then they came back", items=[
   "every demo you have ever seen was filmed on day one"],
   src="Figure, November 2025"),
 
-dict(kind="bullets", act="Evidence", title="The same eighteen months, the other column", items=[
+dict(kind="bullets", act="Evidence", title="Same eighteen months, the failures", items=[
   "Amazon's Blue Jay sortation system: launched October, shut down by February",
   "Tesla, January 2026: Optimus is \"not in usage in our factories in a material way\"",
   "Agility's Digit at Amazon: still a pilot, three years in",
