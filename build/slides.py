@@ -90,7 +90,7 @@ dict(kind="bullets", act="Where we are", title="Italy and Spain", items=[
 dict(kind="bullets", act="The gap", title="Unmet expectations", art="automaton", items=[
   "the future we were promised: a humanoid servant in every home",
   "the future we got: a sealed arm welding the same seam for twenty years",
-  "we mistook the <b>shape</b> of the machine for the point of it",
+  "we judged the machine by its <b>shape</b>, not by its work",
   "for fifty years robots were strong, fast, precise – and blind"]),
 
 dict(kind="anchor", act="The gap", text="Slowly.<br>And then suddenly."),
