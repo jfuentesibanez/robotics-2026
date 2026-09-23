@@ -1,6 +1,6 @@
 # Robotics keynote — CDP / Headspring
 
-A 61-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
+A 62-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
 through Headspring. September 2026. Rebuilt and extended from a 2023 Spanish deck.
 
 ## The one rule
@@ -21,7 +21,7 @@ It writes `../robotics-2026.html`. Takes about a second.
 robotics-2026.html   generated — the deck
 index.html           generated — redirects to the deck, so the Pages URL needs no file name
 img/                 18 animated illustrations (~38 MB) — must sit beside the HTML
-video/               the ten clips, H.264 mp4 (~350 MB) — play inside the deck
+video/               the eleven clips, H.264 mp4 (~375 MB) — play inside the deck
 build/
   slides.py          all slide content, in order. This is the file you usually want
   build.py           renderer: CSS, JS, slide templates
@@ -92,7 +92,7 @@ but it will look cramped, which is the style telling you to split the slide.
 
 ## Videos
 
-Ten clips. `v` or a click plays the one on screen, full screen; `space` pauses, arrows seek,
+Eleven clips. `v` or a click plays the one on screen, full screen; `space` pauses, arrows seek,
 `Esc` stops. Three paths, picked automatically:
 
 1. a local file at `video/<slug>.mp4` or `.webm` → plays inside the deck, full screen, offline.
@@ -103,7 +103,7 @@ Ten clips. `v` or a click plays the one on screen, full screen; `space` pauses, 
 3. opened as a `file://` with no local file → opens YouTube in a new tab, because browsers
    block the embedded player from `file://` origins
 
-Slugs are in `slides.py` (`01-asimov-1967` … `10-figure-helix-25`). Every YouTube ID was checked
+Slugs are in `slides.py` (`01-asimov-1967` … `11-xpeng-iron`). Every YouTube ID was checked
 against the oEmbed API and resolves to the official channel named on the slide. `09-rt2-2023`
 has no YouTube ID: it is DeepMind's demo montage from robotics-transformer2.github.io, so the
 slide carries `link=` instead of `vid=` and the fallback opens that page.

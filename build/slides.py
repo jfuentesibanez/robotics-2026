@@ -133,6 +133,9 @@ dict(kind="bullets", act="AI meets robotics", title="Live: a word in its mouth",
   "watch the pauses and the misreadings. that is the work left"],
   src="Hugging Face · Pollen Robotics, Reachy Mini launch, July 2025 · live, unscripted"),
 
+dict(kind="video", act="AI meets robotics", title="The same trick, at the other end of the price list",
+     vid="4i22XO_HJB8", slug="11-xpeng-iron", label="XPENG Robotics Real-World Interaction Test · XPENG, September 2026 · official demo"),
+
 dict(kind="bullets", act="AI meets robotics", title="Skills now move between bodies", art="hand-word", items=[
   "a skill learned on one arm transfers to a different robot entirely",
   "no re-engineering, no per-platform specialisation",
