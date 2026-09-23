@@ -221,7 +221,7 @@ def render(s, i):
         if pol:
             src += f'<p class="src cred">{photo_credits(pol)}</p>'
         if s.get('pin'):
-            src += f'<p class="src cred">film still: {PHOTOCRED[s["pin"]]["author"]}, 1963</p>'
+            src += f'<p class="src cred">{PHOTOCRED[s["pin"]]["credit"]}</p>'
         body = (f'<div class="col"><h2>{s["title"]}</h2><ul>{lis}</ul>{src}</div>'
                 + (polaroids(pol) if pol else art_block(s['art'], s.get('pin')) if has else ''))
     elif k == 'close':

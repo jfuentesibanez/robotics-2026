@@ -21,7 +21,7 @@ dict(kind="bullets", act="The old longing", title="Talos", art="talos", pin="tal
   "already the two obsessions: tireless labour and absolute obedience",
   "and already the flaw: a single bronze nail at the ankle"]),
 
-dict(kind="bullets", act="The old longing", title="Pandora", art="pandora", items=[
+dict(kind="bullets", act="The old longing", title="Pandora", art="pandora", pin="pandora-krater", items=[
   "made, not born. assembled by Hephaestus on commission",
   "depicted on Greek pottery around 460 BC",
   "the artificial being arrives as a gift and as a punishment",

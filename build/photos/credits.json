@@ -61,6 +61,16 @@
   "file": "film still",
   "author": "<i>Jason and the Argonauts</i>, Columbia Pictures",
   "license": "quoted under fair use / derecho de cita",
-  "url": "https://www.youtube.com/watch?v=9I9LAv4EDRM"
+  "url": "https://www.youtube.com/watch?v=9I9LAv4EDRM",
+  "credit": "film still: <i>Jason and the Argonauts</i>, Columbia Pictures, 1963"
+ },
+ {
+  "slug": "pandora-krater",
+  "caption": "Pandora, c. 460 BC",
+  "file": "File:Niobid Painter ARV 601 23 creation of Pandora - chorus of women - Pans - satyrs and maenad (01).jpg",
+  "author": "ArchaiOptix",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Niobid_Painter_ARV_601_23_creation_of_Pandora_-_chorus_of_women_-_Pans_-_satyrs_and_maenad_(01).jpg",
+  "credit": "calyx krater by the Niobid Painter, British Museum · photo: ArchaiOptix, CC BY-SA 4.0"
  }
 ]
