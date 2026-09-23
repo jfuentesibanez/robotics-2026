@@ -155,6 +155,12 @@ def render(s, i):
                 + art_block(s['art']))
     elif k == 'quote':
         body = f'<blockquote>{s["text"]}</blockquote><p class="attrib">{s["src"]}</p>'
+        if s.get('portrait'):                # a cut-out portrait standing on the footer rule
+            cls.append('has-portrait')
+            uri = datauri_any(PHOTODIR / (s['portrait'] + '.webp'), 'image/webp')
+            body = (f'<div class="col">{body}'
+                    + (f'<p class="src cred">{s["credit"]}</p>' if s.get('credit') else '')
+                    + f'</div><img class="portrait" src="{uri}" alt="">')
     elif k == 'anchor':
         kick = f'<p class="kicker">{s["kicker"]}</p>' if s.get('kicker') else ''
         wide = ' wide' if s.get('wide') else ''
@@ -320,6 +326,15 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
   100%{opacity:1;transform:translate(0,0) rotate(var(--r)) scale(1)}}
 @media (prefers-reduced-motion:reduce){.pol{animation:none}}
 .src.cred{margin-top:6px;font-size:12px}
+/* quote with a cut-out portrait on the right, standing on the footer rule */
+.has-portrait .col{max-width:60%}
+.has-portrait blockquote{max-width:20ch}
+.portrait{position:absolute;right:70px;bottom:58px;height:560px;width:auto;pointer-events:none;
+  -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);
+  filter:sepia(.18) contrast(1.04);animation:rise 1.1s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.portrait{animation:none}}
 /* chart slides: house-style SVG line chart, rust highlight on grey context */
 .k-chart h2{margin-bottom:10px}
 .k-chart .src{margin-top:12px}

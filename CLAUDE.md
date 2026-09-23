@@ -88,6 +88,10 @@ A bullets slide may carry `polaroids=[...]` instead of `art=`: real photos from 
 loose pile (`PILE` in build.py holds the resting positions, up to seven). The credits line is
 built from `photos/credits.json`; every photo is CC BY, CC BY-SA or CC0/public domain from
 Wikimedia Commons. Keep it that way — never a photo without a licence that allows reuse.
+A quote slide may carry `portrait="asimov"` and `credit=`: a transparent cut-out from
+`build/photos/<name>.webp` stands on the footer rule on the right, fading at the bottom. The
+Asimov master is `photos/asimov.png` (Phillip Leonian's portrait, public domain, Library of
+Congress), cut out with the macOS Vision subject mask.
 A `breath` slide is the illustration alone, no text: a pause after a heavy run, used once after
 the three uncomfortable conclusions.
 A `chart` slide is a static SVG line chart drawn by `chart_svg()` in build.py from the numbers
