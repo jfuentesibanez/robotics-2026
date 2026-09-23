@@ -151,6 +151,14 @@ dict(kind="compare", act="AI meets robotics", dark=True,
      cap="not the same robot getting cheaper. the entry ticket to a full-size humanoid falling by two thirds in eighteen months",
      src="Unitree list prices, H1 and H2"),
 
+dict(kind="compare", act="AI meets robotics",
+     fig_a="13× a year", lbl_a="the price of thought · 2023–26",
+     notes_a=["cost of a fixed level of AI performance", "47% cheaper every quarter", "faster than compute, batteries or electricity ever fell"],
+     fig_b="3× in 18 months", lbl_b="the price of a body · 2024–25",
+     notes_b=["entry ticket to a full-size humanoid", "$90,000 to $29,900, two different machines", "fast for hardware. slow next to the brain"],
+     cap="the brain is getting cheap faster than any technology in history. the body is not. that gap is where the waiting is",
+     src="Epoch AI, The plunging price of thought, 2026 · Unitree list prices"),
+
 dict(kind="bullets", act="AI meets robotics", title="The research bench collapsed too", art="scale", items=[
   "2023: ALOHA, two bimanual arms and cameras, under <b>$20,000</b>",
   "2026: SO-101, a desktop arm plus its teleoperation twin, around <b>€550</b>",

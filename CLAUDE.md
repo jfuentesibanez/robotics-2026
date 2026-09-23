@@ -1,6 +1,6 @@
 # Robotics keynote — CDP / Headspring
 
-A 59-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
+A 61-slide HTML deck, in English, delivered by Javier Fuentes (NCompany) for CDP
 through Headspring. September 2026. Rebuilt and extended from a 2023 Spanish deck.
 
 ## The one rule
