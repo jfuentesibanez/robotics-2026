@@ -177,14 +177,6 @@ dict(kind="bullets", act="AI meets robotics", title="Bigger is not the answer on
   "and fine-tuning to <b>your</b> task beats a generalist cold: 43.7% vs 17.7%"],
   src="VLA-Perf, Feb 2026 · SmolVLA, Jun 2025 · RoboChallenge, Oct 2025"),
 
-dict(kind="compare", act="AI meets robotics",
-     fig_a="89.4%", lbl_a="RLBench · best method, January 2026",
-     notes_a=["18 short tabletop tasks: pick, stack, open", "100 demonstrations per task", "simulation, fixed scene"],
-     fig_b="12.4%", lbl_b="BEHAVIOR-1K · best team, 2025",
-     notes_b=["1,000 long household activities", "mobile manipulation, many objects, many steps", "simulated homes, held-out test"],
-     cap="two different benchmarks, two different winners. the gap between them is the gap between a lab task and a chore",
-     src="Stanford AI Index 2026 · RLBench, EquAct · BEHAVIOR Challenge 2025, Robot Learning Collective"),
-
 dict(kind="bullets", act="AI meets robotics", title="And they are slow", items=[
   "package sorting: <b>4× slower</b> than an average worker",
   "laundry 5× slower; most household tasks 2–10× slower than a person",
