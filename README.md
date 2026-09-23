@@ -13,6 +13,9 @@ video/                 drop local copies of the clips here (optional)
 **Running it.** `←` `→` or click to move, `f` for fullscreen, click anywhere in the left
 quarter of the screen to go back. The deck scales to whatever screen it lands on.
 
+**The robot-types slide (11)** builds with clicks: each `→` or click drops one photo on the pile,
+seven in all, and the next press moves on. `←` takes the last photo back.
+
 **Finding your way.** Slide 2 is the agenda: eight acts, click any of them to jump there. Every
 slide after it carries the same eight acts in small type across the top, with the current one in
 brass; that row is clickable too, so you can jump between acts without leaving the deck. The

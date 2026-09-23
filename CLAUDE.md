@@ -84,8 +84,8 @@ The `agenda` slide and the act rail at the top of every slide are built automati
 `act` field, in order of first appearance (`ACTS` in build.py); `Close` is left out. Clicking an
 act in either jumps to its first slide.
 A bullets slide may carry `polaroids=[...]` instead of `art=`: real photos from `build/photos/`
-(square-cropped, embedded at build time) drop in one after another as polaroids and settle into a
-loose pile (`PILE` in build.py holds the resting positions, up to seven). The credits line is
+(square-cropped, embedded at build time) drop in as polaroids, one per click or →, and settle into
+a loose pile; ← takes the last one back, and the deck only moves on once all are down (`PILE` in build.py holds the resting positions, up to seven). The credits line is
 built from `photos/credits.json`; every photo is CC BY, CC BY-SA or CC0/public domain from
 Wikimedia Commons. Keep it that way — never a photo without a licence that allows reuse.
 A quote slide may carry `art=` (slide 3 uses the animated Asimov, piece 19), or `portrait=` and

@@ -334,7 +334,9 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
   0%{opacity:0;transform:translate(60px,-140px) rotate(calc(var(--r) + 22deg)) scale(1.3)}
   65%{opacity:1;transform:translate(0,5px) rotate(calc(var(--r) - 1.5deg)) scale(.98)}
   100%{opacity:1;transform:translate(0,0) rotate(var(--r)) scale(1)}}
-@media (prefers-reduced-motion:reduce){.pol{animation:none}}
+.pile .pol{opacity:0;animation:none;visibility:hidden}
+.pile .pol.shown{visibility:visible;opacity:1;animation:drop .6s cubic-bezier(.2,.8,.3,1.05) both}
+@media (prefers-reduced-motion:reduce){.pol,.pile .pol.shown{animation:none}}
 .src.cred{margin-top:6px;font-size:12px}
 .art.has-pin{position:relative}
 .pol.pin{width:36%;left:-8%;bottom:2%;top:auto;padding:5% 5% 16%}
@@ -437,6 +439,7 @@ footer .fl-wrap{display:flex;align-items:center}
   #bar,#help{display:none}
   .pol{animation:none}
   .rail{display:none}
+  .pile .pol{visibility:visible;opacity:1}
 }
 """
 
@@ -473,9 +476,21 @@ function prefetchAll(){
   const next=()=>{ const n=order.shift(); if(n===undefined) return; animate(n,next); };
   next();
 }
-function show(n){
+// ---- step reveals: a polaroid pile shows one print per click before the deck moves on ----
+function pileOf(k){ return slides[k] && slides[k].querySelector('.pile'); }
+function revealNext(){ const p=pileOf(i); if(!p) return false;
+  const nx=p.querySelector('.pol:not(.shown)'); if(!nx) return false;
+  nx.classList.add('shown'); return true; }
+function hideLast(){ const p=pileOf(i); if(!p) return false;
+  const sh=p.querySelectorAll('.pol.shown'); if(!sh.length) return false;
+  sh[sh.length-1].classList.remove('shown'); return true; }
+function next(){ if(!revealNext()) show(i+1); }
+function prev(){ if(!hideLast()) show(i-1, true); }
+function show(n, back){
   i=Math.max(0,Math.min(slides.length-1,n));
   slides.forEach((s,k)=>s.classList.toggle('on',k===i));
+  const pl=pileOf(i);                 // arriving forwards: empty pile; backwards: the full pile
+  if(pl) pl.querySelectorAll('.pol').forEach(p=>p.classList.toggle('shown', !!back));
   document.body.classList.toggle('dark', slides[i].classList.contains('dark'));
   fitSlide(slides[i]);
   animate(i); animate(i+1);
@@ -569,8 +584,8 @@ addEventListener('keydown',e=>{
       else stopVideo(ps); }
     return;
   }
-  if(['ArrowRight','PageDown',' ','Enter','n'].includes(e.key)){e.preventDefault();show(i+1)}
-  if(['ArrowLeft','PageUp','p'].includes(e.key)){e.preventDefault();show(i-1)}
+  if(['ArrowRight','PageDown',' ','Enter','n'].includes(e.key)){e.preventDefault();next()}
+  if(['ArrowLeft','PageUp','p'].includes(e.key)){e.preventDefault();prev()}
   if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1);
   if(e.key==='v'){const w=slides[i].querySelector('.vwrap'); if(w){e.preventDefault();playVideo(w)}}
   if(e.key==='f'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
@@ -582,7 +597,7 @@ document.addEventListener('click',e=>{
   const st=e.target.closest('.vstage');
   if(st){ if(!st.classList.contains('playing')) playVideo(st.closest('.vwrap')); return; }
   if(e.target.closest('a'))return;
-  show(i+ (e.clientX < innerWidth*0.28 ? -1 : 1));
+  (e.clientX < innerWidth*0.28 ? prev : next)();
 });
 fit();
 show(location.hash?parseInt(location.hash.slice(2))-1||0:0);
