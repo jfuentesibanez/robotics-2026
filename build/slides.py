@@ -25,7 +25,7 @@ dict(kind="bullets", act="The old longing", title="Pandora", art="pandora", pin=
   "made, not born. assembled by Hephaestus on commission",
   "depicted on Greek pottery around 460 BC",
   "the artificial being arrives as a gift and as a punishment",
-  "we have never told this story neutrally"]),
+  "every robot headline since is Pandora: a gift or a punishment"]),
 
 dict(kind="bullets", act="The old longing", title="The Golem", art="golem", items=[
   "the legend of Prague: clay shaped into a servant by Rabbi Loew",
