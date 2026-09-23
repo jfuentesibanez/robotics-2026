@@ -155,7 +155,10 @@ def render(s, i):
                 + art_block(s['art']))
     elif k == 'quote':
         body = f'<blockquote>{s["text"]}</blockquote><p class="attrib">{s["src"]}</p>'
-        if s.get('portrait'):                # a cut-out portrait standing on the footer rule
+        if s.get('art'):                     # quote beside an illustration
+            cls.append('has-art')
+            body = f'<div class="col">{body}</div>' + art_block(s['art'])
+        elif s.get('portrait'):              # a cut-out portrait standing on the footer rule
             cls.append('has-portrait')
             uri = datauri_any(PHOTODIR / (s['portrait'] + '.webp'), 'image/webp')
             body = (f'<div class="col">{body}'
@@ -329,6 +332,7 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
 /* quote with a cut-out portrait on the right, standing on the footer rule */
 .has-portrait .col{max-width:60%}
 .has-portrait blockquote{max-width:20ch}
+.k-quote.has-art blockquote{max-width:20ch;font-size:40px}
 .portrait{position:absolute;right:70px;bottom:58px;height:560px;width:auto;pointer-events:none;
   -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);
   mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);

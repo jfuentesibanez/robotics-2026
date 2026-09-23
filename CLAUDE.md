@@ -20,7 +20,7 @@ It writes `../robotics-2026.html`. Takes about a second.
 ```
 robotics-2026.html   generated — the deck
 index.html           generated — redirects to the deck, so the Pages URL needs no file name
-img/                 18 animated illustrations (~38 MB) — must sit beside the HTML
+img/                 19 animated illustrations (~35 MB) — must sit beside the HTML
 video/               the eleven clips, H.264 mp4 (~375 MB) — play inside the deck
 build/
   slides.py          all slide content, in order. This is the file you usually want
@@ -33,7 +33,7 @@ README.md            presenter-facing notes: how to run it, what changed since 2
 
 ## How the illustrations work — read before touching them
 
-Each of the 18 pieces is a ~150-frame animated WebP loop. All 18 come to 38 MB, far too
+Each of the 19 pieces is a ~150-frame animated WebP loop. All 19 come to 35 MB, far too
 much to embed or to load up front. So each ships twice:
 
 - the **still first frame** is embedded in the HTML as a data URI (494 KB for all 17)
@@ -88,7 +88,8 @@ A bullets slide may carry `polaroids=[...]` instead of `art=`: real photos from 
 loose pile (`PILE` in build.py holds the resting positions, up to seven). The credits line is
 built from `photos/credits.json`; every photo is CC BY, CC BY-SA or CC0/public domain from
 Wikimedia Commons. Keep it that way — never a photo without a licence that allows reuse.
-A quote slide may carry `portrait="asimov"` and `credit=`: a transparent cut-out from
+A quote slide may carry `art=` (slide 3 uses the animated Asimov, piece 19), or `portrait=` and
+`credit=`: a transparent cut-out from
 `build/photos/<name>.webp` stands on the footer rule on the right, fading at the bottom. The
 Asimov master is `photos/asimov.png` (Phillip Leonian's portrait, public domain, Library of
 Congress), cut out with the macOS Vision subject mask.

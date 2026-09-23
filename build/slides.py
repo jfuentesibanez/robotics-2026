@@ -10,8 +10,7 @@ dict(kind="agenda", title="The road"),
 # ---------------- ACT I — THE OLD LONGING ----------------
 dict(kind="quote", act="The old longing",
      text="“I wonder if we will make robots so much like men, and men so much like robots, that eventually we'll lose the distinction altogether.”",
-     src="Isaac Asimov, BBC <i>Towards Tomorrow</i>, 1967", portrait="asimov",
-     credit="photo: Phillip Leonian, New York World-Telegram &amp; Sun collection, Library of Congress · public domain"),
+     src="Isaac Asimov, BBC <i>Towards Tomorrow</i>, 1967", art="asimov"),
 
 dict(kind="video", act="The old longing", title="The question is sixty years old",
      vid="_7_DiUpyrjc", slug="01-asimov-1967", label="1967: Can Humans and Robots Co-Exist? · BBC Archive"),
