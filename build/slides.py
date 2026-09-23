@@ -15,7 +15,7 @@ dict(kind="quote", act="The old longing",
 dict(kind="video", act="The old longing", title="The question is sixty years old",
      vid="_7_DiUpyrjc", slug="01-asimov-1967", label="1967: Can Humans and Robots Co-Exist? · BBC Archive"),
 
-dict(kind="bullets", act="The old longing", title="Talos", art="talos", items=[
+dict(kind="bullets", act="The old longing", title="Talos", art="talos", pin="talos-1963", items=[
   "bronze giant, forged by a god, patrolling Crete three times a day",
   "the first automaton in the Western imagination",
   "already the two obsessions: tireless labour and absolute obedience",

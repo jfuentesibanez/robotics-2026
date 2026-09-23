@@ -25,30 +25,6 @@ for _f in sorted(POSTERDIR.glob('*.webp')):
     _key = _f.stem.split('-', 1)[1]
     ART[_key]  = datauri_any(_f, 'image/webp')
     ANIM[_key] = 'img/' + _f.name
-# Photos for polaroid stacks: build/photos/<slug>.webp, credits in photos/credits.json
-import json as _json
-PHOTODIR = HERE / 'photos'
-PHOTO, PHOTOCRED = {}, {}
-if (PHOTODIR / 'credits.json').exists():
-    for _c in _json.loads((PHOTODIR / 'credits.json').read_text()):
-        PHOTO[_c['slug']] = datauri_any(PHOTODIR / (_c['slug'] + '.webp'), 'image/webp')
-        PHOTOCRED[_c['slug']] = _c
-# scattered resting places for up to seven prints: left %, top %, rotation
-PILE = [(2,-1,-7), (56,-2,6), (-4,26,5), (29,22,-3), (62,25,-6), (8,53,-4), (51,54,7)]
-
-def polaroids(slugs):
-    cards = ''
-    for j, sl in enumerate(slugs):
-        x, y, r = PILE[j]
-        cards += (f'<figure class="pol" style="left:{x}%;top:{y}%;--r:{r}deg;--d:{0.35+j*0.45:.2f}s">'
-                  f'<img src="{PHOTO[sl]}" alt="{html.escape(PHOTOCRED[sl]["caption"])}">'
-                  f'<figcaption>{PHOTOCRED[sl]["caption"]}</figcaption></figure>')
-    return f'<div class="art pile">{cards}</div>'
-
-def photo_credits(slugs):
-    return 'photos: Wikimedia Commons · ' + ' · '.join(
-        f'{PHOTOCRED[s]["author"]}, {PHOTOCRED[s]["license"]}' for s in slugs)
-
 TITLE = "A Look at the Present and Future of Robotics"
 FOOT  = "Robotics · present and future"
 DATE  = "September 2026"
@@ -73,10 +49,39 @@ LOGO = ('<div class="logorow">'
 FOOTLOGO = '<span class="foot-logo" aria-hidden="true"></span>'
 
 
-def art_block(name):
+# Photos for polaroid stacks: build/photos/<slug>.webp, credits in photos/credits.json
+import json as _json
+PHOTODIR = HERE / 'photos'
+PHOTO, PHOTOCRED = {}, {}
+if (PHOTODIR / 'credits.json').exists():
+    for _c in _json.loads((PHOTODIR / 'credits.json').read_text()):
+        PHOTO[_c['slug']] = datauri_any(PHOTODIR / (_c['slug'] + '.webp'), 'image/webp')
+        PHOTOCRED[_c['slug']] = _c
+# scattered resting places for up to seven prints: left %, top %, rotation
+PILE = [(2,-1,-7), (56,-2,6), (-4,26,5), (29,22,-3), (62,25,-6), (8,53,-4), (51,54,7)]
+
+def polaroids(slugs):
+    cards = ''
+    for j, sl in enumerate(slugs):
+        x, y, r = PILE[j]
+        cards += (f'<figure class="pol" style="left:{x}%;top:{y}%;--r:{r}deg;--d:{0.35+j*0.45:.2f}s">'
+                  f'<img src="{PHOTO[sl]}" alt="{html.escape(PHOTOCRED[sl]["caption"])}">'
+                  f'<figcaption>{PHOTOCRED[sl]["caption"]}</figcaption></figure>')
+    return f'<div class="art pile">{cards}</div>'
+
+def photo_credits(slugs):
+    return 'photos: Wikimedia Commons · ' + ' · '.join(
+        f'{PHOTOCRED[s]["author"]}, {PHOTOCRED[s]["license"]}' for s in slugs)
+
+def art_block(name, pin=None):
     uri = ART[name]
-    return (f'<div class="art"><img class="art-img" src="{uri}" '
-            f'data-anim="{ANIM[name]}" alt=""></div>')
+    extra = ''
+    if pin:                                   # one polaroid pinned over the corner, arrives late
+        extra = (f'<figure class="pol pin" style="--r:-8deg;--d:1.1s">'
+                 f'<img src="{PHOTO[pin]}" alt="{html.escape(PHOTOCRED[pin]["caption"])}">'
+                 f'<figcaption>{PHOTOCRED[pin]["caption"]}</figcaption></figure>')
+    return (f'<div class="art{" has-pin" if pin else ""}"><img class="art-img" src="{uri}" '
+            f'data-anim="{ANIM[name]}" alt="">{extra}</div>')
 
 MAPDIR = HERE / 'maps'
 def map_svg(code):
@@ -215,8 +220,10 @@ def render(s, i):
         src = src_line(s)
         if pol:
             src += f'<p class="src cred">{photo_credits(pol)}</p>'
+        if s.get('pin'):
+            src += f'<p class="src cred">film still: {PHOTOCRED[s["pin"]]["author"]}, 1963</p>'
         body = (f'<div class="col"><h2>{s["title"]}</h2><ul>{lis}</ul>{src}</div>'
-                + (polaroids(pol) if pol else art_block(s['art']) if has else ''))
+                + (polaroids(pol) if pol else art_block(s['art'], s.get('pin')) if has else ''))
     elif k == 'close':
         body = (f'<h1 class="cover-title">{s["title"]}</h1>'
                 f'<p class="mail"><a href="mailto:{s["mail"]}">{s["mail"]}</a></p>'
@@ -329,6 +336,9 @@ blockquote{font-size:44px;line-height:1.28;font-weight:400;font-style:italic;max
   100%{opacity:1;transform:translate(0,0) rotate(var(--r)) scale(1)}}
 @media (prefers-reduced-motion:reduce){.pol{animation:none}}
 .src.cred{margin-top:6px;font-size:12px}
+.art.has-pin{position:relative}
+.pol.pin{width:36%;left:-8%;bottom:2%;top:auto;padding:5% 5% 16%}
+.pol.pin figcaption{font-size:15px}
 /* quote with a cut-out portrait on the right, standing on the footer rule */
 .has-portrait .col{max-width:60%}
 .has-portrait blockquote{max-width:20ch}

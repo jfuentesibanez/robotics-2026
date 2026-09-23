@@ -93,6 +93,10 @@ A quote slide may carry `art=` (slide 3 uses the animated Asimov, piece 19), or 
 `build/photos/<name>.webp` stands on the footer rule on the right, fading at the bottom. The
 Asimov master is `photos/asimov.png` (Phillip Leonian's portrait, public domain, Library of
 Congress), cut out with the macOS Vision subject mask.
+An illustrated bullets slide may also carry `pin="talos-1963"`: one polaroid pinned over the
+lower-left corner of the illustration, landing a second after the slide appears. The Talos still
+is the one exception to the free-licence rule: a frame from Columbia's *Jason and the Argonauts*
+(1963), from the official Movieclips upload, quoted small and credited on the slide.
 A `breath` slide is the illustration alone, no text: a pause after a heavy run, used once after
 the three uncomfortable conclusions.
 A `chart` slide is a static SVG line chart drawn by `chart_svg()` in build.py from the numbers
