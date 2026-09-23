@@ -108,6 +108,10 @@ against the oEmbed API and resolves to the official channel named on the slide. 
 has no YouTube ID: it is DeepMind's demo montage from robotics-transformer2.github.io, so the
 slide carries `link=` instead of `vid=` and the fallback opens that page.
 
+`11-xpeng-iron` is a 100-second excerpt of XPENG's 5:43 official video (4i22XO_HJB8): its three
+demo sections with their title cards, 0:15–1:00, 2:00–2:25 and 3:00–3:30, re-encoded; the
+presenter's explanations are cut. The slide label says "excerpt".
+
 GitHub's hard limit is 100 MiB per file; the Amazon clip is 95.6 MiB. Do not re-download it at
 a higher setting.
 
